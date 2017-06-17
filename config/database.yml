@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: blvd_production
-  username: blvd
-  password: <%= ENV['BLVD_DATABASE_PASSWORD'] %>
+  # username: blvd
+  # password: <%= ENV['BLVD_DATABASE_PASSWORD'] %>
