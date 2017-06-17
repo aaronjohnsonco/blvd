@@ -1,0 +1,52 @@
+@import 'variables';
+
+footer {
+  padding: 2.5rem 0;
+  background: #111;
+}
+.contact {
+  margin: 20px 0;
+}
+.contact__header {
+  font-family: $font_regular;
+  font-size: 2.7rem;
+  margin: 0;
+  color: $white;
+}
+.contact__text {
+  font-family: $font_thin;
+  font-size: 1.6rem;
+  margin: 0;
+  color: $white;
+}
+.contact_info {
+  margin: 20px 0;
+}
+.contact_info__header {
+  font-family: $font_regular;
+  font-size: 2.4rem;
+  margin: 0;
+  color: $white;
+}
+.contact_info__text {
+  font-family: $font_thin;
+  font-size: 1.6rem;
+  margin: 0;
+  color: $white;
+}
+.contact_address {
+  margin: 20px 0;
+}
+.contact_address__header {
+  font-family: $font_regular;
+  font-size: 2.4rem;
+  margin: 0;
+  color: $white;
+}
+.contact_address__text {
+  font-family: $font_thin;
+  font-size: 1.4rem;
+  margin: 0;
+  color: $white;
+  text-transform: uppercase;
+}

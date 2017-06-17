@@ -1,0 +1,80 @@
+<%= render 'partials/navbar' %>
+
+<header id="hero_header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero">
+          <h1 class="hero__header fadeInDown animated">Your Dream Home Awaits</h1>
+          <p class="hero__sub fadeIn animated">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          <a href="" class="hero__btn fadeInUp animated">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Block -->
+  <section id="block_container">
+    <div class="container">
+      <div class="block">
+        <p class="block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTIONS -->
+  <section>
+    <div class="option">
+      <div class="option__img">
+        <%= image_tag 'home', class: 'option__img-pic' %>
+      </div>
+      <div class="option__content">
+        <h2 class="option__header">Option Header</h2>
+        <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <a href="#" class="option__btn">Learn More</a>
+      </div>
+    </div>
+    <div class="option_reverse">
+      <div class="option__img">
+        <%= image_tag 'home2', class: 'option__img-pic' %>
+      </div>
+      <div class="option__content">
+        <h2 class="option__header">Option Header</h2>
+        <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <a href="#" class="option__btn">Learn More</a>
+      </div>
+    </div>
+    <div class="option">
+      <div class="option__img">
+        <%= image_tag 'home3', class: 'option__img-pic' %>
+      </div>
+      <div class="option__content">
+        <h2 class="option__header">Option Header</h2>
+        <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <a href="#" class="option__btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+
+  </section>
+
+  <!-- JOIN EMAIL LIST -->
+  <section class="join">
+    <div class="join__header">
+      <h3 class="join__header-text">Stay informed on the latest</h3>
+    </div>
+    <div class="join__form">
+      <input type="text" class="join__input" placeholder="Name" />
+      <input type="text" class="join__input" placeholder="Email" />
+      <button class="join__btn">Subscribe</button>
+    </div>
+  </section>
+
+</main>
+
+<%= render 'partials/footer' %>

@@ -1,0 +1,39 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+@font-face {
+  font-family: 'RobotoThin';
+  src: font_url('Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: 'RobotoLight';
+  src: font_url('Roboto-Light.ttf');
+}
+@font-face {
+  font-family: 'RobotoRegular';
+  src: font_url('Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoBold';
+  src: font_url('Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'RobotoBlack';
+  src: font_url('RobotoBlack.ttf');
+}
+
+@import 'home';
+@import 'footer';
