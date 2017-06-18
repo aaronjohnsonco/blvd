@@ -32,8 +32,13 @@ body {
 }
 @font-face {
   font-family: 'RobotoBlack';
-  src: font_url('RobotoBlack.ttf');
+  src: font_url('Roboto-Black.ttf');
 }
+@font-face {
+  font-family: 'RobotoThinItal';
+  src: font_url('Roboto-ThinItalic.ttf');
+}
+
 
 @import 'home';
 @import 'footer';
