@@ -92,7 +92,7 @@
 
 
 #options {
-  padding: 70px 0;
+  padding: 20px 0;
 }
 .pad20 {
   padding: 20px 0;
@@ -108,13 +108,12 @@
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-// .option__img {
-//   width: 50vw;
-//   padding: 3rem;
-// }
+.option__img {
+  padding: 3rem 0;
+}
 .option__img-pic {
   width: 100%;
   border: 8px solid $black_light;
@@ -125,7 +124,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 6rem;
+  padding: 3rem 6rem;
 }
 .option__header {
   font-family: $font_black;
