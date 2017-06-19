@@ -5,13 +5,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
 }
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 85vh;
+  min-height: 88vh;
 }
 .hero__header {
   font-family: $font_thin;
@@ -49,6 +50,8 @@
 }
 #block_container {
   background: $black;
+  border-top: 5px solid $black_alt;
+  border-bottom: 5px solid $black_alt;
 }
 .block {
   display: flex;
@@ -65,8 +68,28 @@
   margin: 0;
   text-align: center;
 }
+
+#welcome {
+  padding: 50px 0 0 0;
+}
+.welcome__header {
+  font-family: $font_regular;
+  margin: 0 0 3px 0;
+  font-size: 4.5rem;
+}
+.welcome__text {
+  font-family: $font_light;
+  margin: 0;
+  font-size: 1.8rem;
+}
+.border_btm {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+
 #options {
-  background: #ddd;
+  padding: 70px 0;
 }
 .pad20 {
   padding: 20px 0;
@@ -85,13 +108,13 @@
   border-top: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
 }
-.option__img {
-  width: 50vw;
-  padding: 3rem;
-}
+// .option__img {
+//   width: 50vw;
+//   padding: 3rem;
+// }
 .option__img-pic {
   width: 100%;
-  border: 8px solid $white;
+  border: 8px solid $black_light;
 }
 .option__content {
   width: 50vw;
@@ -102,8 +125,11 @@
   padding: 0 6rem;
 }
 .option__header {
-  font-family: $font_thin;
-  margin: 0 0 3px 0;
+  font-family: $font_black;
+  margin: 8px 0 12px 0;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+  color: #777;
 }
 .option__text{
   margin: 0 0 15px 0;
