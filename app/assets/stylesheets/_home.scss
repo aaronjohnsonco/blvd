@@ -12,47 +12,47 @@
   background-size: cover;
 
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 92vh;
-}
-.hero__header {
-  font-family: $font_thin;
-  font-size: 4.5rem;
-  color: $white;
-  margin: 0;
-}
-.hero__sub {
-  font-family: $font_thin;
-  font-size: 2.2rem;
-  color: $white;
-  width: 60vw;
-}
-.hero__btn {
-  background: transparent;
-  color: $white;
-  padding: 12px 20px;
-  border-radius: 2px;
-  text-decoration: none;
-  border-width: 3px;
-  border-style: solid;
-  border-color: $white;
-  -webkit-transition: all 0.5s; /* Safari */
-  transition: all 0.5s;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-size: 1.4rem;
-}
-.hero__btn:hover,.hero__btn:focus {
-  background: $white;
-  color: $black;
-  border-color: $white;
-  text-decoration: none !important;
-}
+// .hero {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
+//   min-height: 92vh;
+// }
+// .hero__header {
+//   font-family: $font_thin;
+//   font-size: 4.5rem;
+//   color: $white;
+//   margin: 0;
+// }
+// .hero__sub {
+//   font-family: $font_thin;
+//   font-size: 2.2rem;
+//   color: $white;
+//   width: 60vw;
+// }
+// .hero__btn {
+//   background: transparent;
+//   color: $white;
+//   padding: 12px 20px;
+//   border-radius: 2px;
+//   text-decoration: none;
+//   border-width: 3px;
+//   border-style: solid;
+//   border-color: $white;
+//   -webkit-transition: all 0.5s; /* Safari */
+//   transition: all 0.5s;
+//   letter-spacing: 1px;
+//   text-transform: uppercase;
+//   text-decoration: none !important;
+//   font-size: 1.4rem;
+// }
+// .hero__btn:hover,.hero__btn:focus {
+//   background: $white;
+//   color: $black;
+//   border-color: $white;
+//   text-decoration: none !important;
+// }
 #block_container {
   background: $black;
   border-top: 5px solid $black_alt;
@@ -253,6 +253,47 @@ span.builders {
      width: 175px;
      margin: 5px 0 0 0;
    }
+   .hero {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     min-height: 92vh;
+   }
+   .hero__header {
+     font-family: $font_light;
+     font-size: 3.5rem;
+     color: $white;
+     margin: 0;
+   }
+   .hero__sub {
+     font-family: $font_light;
+     font-size: 2.2rem;
+     color: $white;
+     width: 60vw;
+   }
+   .hero__btn {
+     background: transparent;
+     color: $white;
+     padding: 12px 20px;
+     border-radius: 2px;
+     text-decoration: none;
+     border-width: 3px;
+     border-style: solid;
+     border-color: $white;
+     -webkit-transition: all 0.5s; /* Safari */
+     transition: all 0.5s;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     text-decoration: none !important;
+     font-size: 1.4rem;
+   }
+   .hero__btn:hover,.hero__btn:focus {
+     background: $white;
+     color: $black;
+     border-color: $white;
+     text-decoration: none !important;
+   }
    .option {
      display: flex;
      flex-direction: column;
@@ -387,6 +428,51 @@ span.builders {
 
  /* Extra Small Devices, Phones */
  @media only screen and (min-width : 480px) {
+   .logo__img {
+     width: 175px;
+     margin: 5px 0 0 0;
+   }
+   .hero {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     min-height: 92vh;
+   }
+   .hero__header {
+     font-family: $font_light;
+     font-size: 3.5rem;
+     color: $white;
+     margin: 0;
+   }
+   .hero__sub {
+     font-family: $font_light;
+     font-size: 2.2rem;
+     color: $white;
+     width: 60vw;
+   }
+   .hero__btn {
+     background: transparent;
+     color: $white;
+     padding: 12px 20px;
+     border-radius: 2px;
+     text-decoration: none;
+     border-width: 3px;
+     border-style: solid;
+     border-color: $white;
+     -webkit-transition: all 0.5s; /* Safari */
+     transition: all 0.5s;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     text-decoration: none !important;
+     font-size: 1.4rem;
+   }
+   .hero__btn:hover,.hero__btn:focus {
+     background: $white;
+     color: $black;
+     border-color: $white;
+     text-decoration: none !important;
+   }
    .option {
      display: flex;
      flex-direction: column;
