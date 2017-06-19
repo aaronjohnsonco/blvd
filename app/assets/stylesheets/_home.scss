@@ -73,9 +73,12 @@
   padding: 50px 0 0 0;
 }
 .welcome__header {
-  font-family: $font_regular;
+  font-family: $font_thin;
   margin: 0 0 3px 0;
   font-size: 4.5rem;
+  span {
+    font-family: $font_regular;
+  }
 }
 .welcome__text {
   font-family: $font_light;
