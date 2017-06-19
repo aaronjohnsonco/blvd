@@ -1,5 +1,10 @@
 @import 'variables';
 
+.logo__img {
+  width: 225px;
+  margin: 5px 0 0 0;
+}
+
 #hero_header {
   background: image-url('hero.png');
   background-repeat: no-repeat;
@@ -12,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 88vh;
+  min-height: 92vh;
 }
 .hero__header {
   font-family: $font_thin;
@@ -76,9 +81,14 @@
   font-family: $font_thin;
   margin: 0 0 3px 0;
   font-size: 4.5rem;
-  span {
-    font-family: $font_regular;
-  }
+}
+span.blvd {
+  font-family: $font_regular;
+  color: $primary_color;
+}
+span.builders {
+  font-family: $font_thin;
+  color: $primary_color;
 }
 .welcome__text {
   font-family: $font_light;

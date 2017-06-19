@@ -11,6 +11,7 @@ $font_thinital: 'RobotoThinItal';
 $black: #222;
 $black_alt: darken($black, 5%);
 $black_light: lighten($black, 80%);
+$black_dim: lighten($black, 50%);
 $white: #fefefe;
 $primary_color: #D0011B;
 $primary_color_alt: darken($primary_color, 5%);
