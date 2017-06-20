@@ -4518,7 +4518,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-family: 'RobotoRegular';
   text-transform: uppercase;
   font-size: 1.4rem;
-  -webkit-transition: all 0.5s; /* Safari */
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .navbar-default .navbar-nav > li > a:hover,
