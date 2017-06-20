@@ -2,7 +2,9 @@
 
 footer {
   padding: 2.5rem 0;
-  background: #111;
+  background: #222;
+  border-top: 5px solid $black_alt;
+  border-bottom: 5px solid $black_alt;
 }
 .contact {
   margin: 20px 0;
