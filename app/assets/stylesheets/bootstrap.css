@@ -4517,16 +4517,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-family: 'RobotoRegular';
   text-transform: uppercase;
   font-size: 1.4rem;
+  -webkit-transition: all 0.5s; /* Safari */
+  transition: all 0.5s;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #222;
+  color: #D0011B;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #222;
+  color: #D0011B;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
