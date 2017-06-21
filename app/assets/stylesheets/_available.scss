@@ -1,0 +1,115 @@
+@import 'variables';
+
+#available_header {
+  background: image-url('header2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 4px solid $black_border;
+}
+
+.secondary_header {
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.secondary_header__title {
+  background: rgba(255, 255, 255, .8);
+  flex: 1;
+}
+.secondary_header__text {
+  font-family: $font_light;
+  font-size: 4.0rem;
+  color: $black;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+#available_main {
+  padding: 4rem 0 8rem 0;
+}
+
+.available_intro_text {
+  font-size: 1.8rem;
+  font-family: $font_light;
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid $black_light;
+  margin: 0 0 3rem 0;
+}
+
+.home {
+
+}
+.home__img {
+  width: 100%;
+  border: 5px solid $black_light;
+  margin: 0 0 1rem 0;
+}
+.home_address {
+  border-bottom: 1px solid $black_light;
+  padding: 0 0 1rem 0;
+}
+.home_address__text {
+  font-family: $font_light;
+  margin: 0;
+}
+.street {
+  font-size: 1.9rem;
+}
+.home_details {
+  padding: 1rem 0 0 0;
+}
+.home_details__text {
+  font-family: $font_regular;
+  font-size: 1.4rem;
+  margin: 0 0 2rem 0;
+}
+.home__link {
+  font-size: 1.0rem;
+  background: $black;
+  color: $white !important;
+  padding: 7px 15px;
+  border-radius: 2px;
+  text-decoration: none;
+  border-width: 3px;
+  border-style: solid;
+  border-color: $black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.home__link:hover, .home__link:focus {
+  color: $white !important;
+  text-decoration: none !important;
+  background: $primary_color;
+  border-color: $primary_color;
+}
+
+// /* Custom, iPhone Retina */
+ @media only screen and (min-width : 320px) {
+
+ }
+
+ // /* Extra Small Devices, Phones */
+ @media only screen and (min-width : 480px) {
+
+ }
+
+ // /* Small Devices, Tablets */
+ @media only screen and (min-width : 768px) {
+
+ }
+
+ // /* Medium Devices, Desktops */
+ @media only screen and (min-width : 992px) {
+
+ }
+
+ // /* Large Devices, Wide Screens */
+ @media only screen and (min-width : 1200px) {
+
+ }

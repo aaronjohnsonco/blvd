@@ -1,0 +1,176 @@
+<%= render 'partials/navbar' %>
+
+<header id="available_header">
+  <div class="secondary_header">
+    <div class="secondary_header__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="secondary_header__text">Home Detail</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="detail">
+  <div class="container">
+    <div class="detail_top">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="detail_address">123 Flamingo Drive, Franklin, TN 12323 <span class="pull-right bold">$845,000</span></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <%= image_tag 'home', class: 'detail__img' %>
+          <div class="add_views">
+            <%= image_tag 'home', class: 'add_views__img' %>
+            <%= image_tag 'home', class: 'add_views__img' %>
+            <%= image_tag 'home', class: 'add_views__img' %>
+            <%= image_tag 'home', class: 'add_views__img' %>
+            <%= image_tag 'home', class: 'add_views__img' %>
+            <%= image_tag 'home', class: 'add_views__img' %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="detail_community">The Highlands of Ladd Park</p>
+          <p class="detail_description">The New Victorian is an elegant new take mixing Victorian and English architecture.  A functional layout with sleek, clean finishes!</p>
+          <p class="detail_description_alt">
+            <span class="bold">SQFT:</span> 2,500<br/>
+            <span class="bold">Stories:</span> 2<br/>
+            <span class="bold">Bedrooms:</span> 4<br/>
+            <span class="bold">Baths:</span> 2.5<br/>
+            <span class="bold">Garage:</span> 2-car
+          </p>
+          <!-- <a href="/detail" class="home__link">View Specs</a> -->
+
+          <!-- <p class="detail_spec">
+            Status: For Sale<br/>
+            Community: Logone Falls<br/>
+            SQFT: 3,400<br/>
+            Stories: 2<br/>
+            Bedrooms: 4<br/>
+            Bathrooms: 2.5<br/>
+            Garage: 2
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <div class="community">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="community_info">
+            <p class="community__header">Neighborhood Overview</p>
+            <p class="community__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="school_info">
+            <p class="community__header">Williamson County Schools</p>
+            <ul class="community_list">
+              <li class="community_list__item">Oak View Elementary</li>
+              <li class="community_list__item">Page Middle School</li>
+              <li class="community_list__item">Page High School</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <%= image_tag 'map', class: 'map_image' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="community__header">Additional Finishes & Products Used</p>
+          <p class="specs__subhead">Floor Coverings</p>
+          <ul class="community_list">
+            <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+            <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+            <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Trim</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Cabinets and Vanities</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Kitchen and Bath</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">HVAC and Insulation</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Plumbing</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Electrical</p>
+          <ul class="community_list">
+
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Roof and Gutters</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Windows</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Veneer - Brick and Fiber Cement Board</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Garage</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+          <p class="specs__subhead">Landscaping</p>
+          <ul class="community_list">
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <li class="community_list__item">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+            <!-- <li class="community_list__item"></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<%= render 'partials/footer' %>

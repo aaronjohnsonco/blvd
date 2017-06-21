@@ -1,0 +1,84 @@
+@import 'variables';
+
+#detail {
+  padding: 5rem 0;
+}
+.detail_top {
+  padding: 0 0 3rem 0;
+  border-bottom: 1px solid $black_light;
+}
+.detail_address {
+  font-family: $font_light;
+  margin: 0 0 3rem 0;
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid $black_light;
+}
+.detail_community {
+  font-family: $font_black;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.detail_description {
+  font-family: $font_light;
+  margin: 0 0 2rem 0;
+}
+
+.detail_description_alt {
+  font-family: $font_light;
+  margin: 0 0 2rem 0;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+
+.detail__img {
+  width: 100%;
+}
+
+.add_views {
+  padding: 1rem 0;
+}
+.add_views__img {
+  width: 100px;
+  margin: 0 0 0.5rem 0;
+}
+
+.community {
+  padding: 3rem 0;
+  border-bottom: 1px solid $black_light;
+}
+.community_info {
+  margin: 0 0 2.5rem 0;
+}
+.community__header {
+  font-family: $font_bold;
+  font-size: 2.3rem;
+  margin: 0;
+}
+.community__text {
+  font-family: $font_light;
+  font-size: 1.6rem;
+}
+.map_image {
+  width: 100%;
+}
+.community_list {
+  padding: 0 0 0 20px;
+}
+.community_list__item {
+  font-family: $font_light;
+  font-size: 1.6rem;
+}
+.school_info {
+  margin: 0 0 2.5rem 0;
+}
+
+.specs {
+  padding: 4rem 0;
+}
+
+.specs__subhead {
+  font-family: $font_bold;
+  font-size: 1.8rem;
+  margin: 2rem 0 0 0;
+}
