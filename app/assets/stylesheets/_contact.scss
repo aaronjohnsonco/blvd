@@ -1,8 +1,8 @@
 @import 'variables';
 
-.touch {
-  padding: 5.0rem 0;
-}
+// .touch {
+//   padding: 5.0rem 0;
+// }
 // .touch__header {
 //   font-family: $font_black;
 //   font-size: 4.0rem;
@@ -131,8 +131,11 @@ select::-ms-expand {
   }
   .touch__header {
     font-family: $font_black;
-    font-size: 3.0rem;
+    font-size: 3.5rem;
     margin: 0 0 5px 0;
+  }
+  .touch {
+    padding: 3.0rem 0;
   }
 }
 
@@ -161,6 +164,14 @@ select::-ms-expand {
     font-size: 1.4rem;
     font-family: $font_regular;
     border-radius: 2px;
+  }
+  .touch__header {
+    font-family: $font_black;
+    font-size: 4.0rem;
+    margin: 0 0 5px 0;
+  }
+  .touch {
+    padding: 5.0rem 0;
   }
 }
 
