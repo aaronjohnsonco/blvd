@@ -17,6 +17,10 @@
   font-size: 1.6rem;
   margin: 2rem 0;
 }
+.touch__label {
+  font-family: $font_black;
+  font-size: 1.6rem;
+}
 .touch__input {
   display: block;
   width: 100%;
@@ -31,6 +35,28 @@
   margin: 0 5px 0 0;
   font-size: 1.4rem;
   border-radius: 2px;
+}
+
+select:not([multiple]) {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: $font_light;
+  padding: 1.3rem;
+  font-size: 1.8rem;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: #eee;
+  height: 45px;
+  margin: 0 5px 0 0;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
 }
 .touch__textarea {
   display: block;
