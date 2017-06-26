@@ -1,14 +1,16 @@
 @import 'variables';
 
 footer {
-  padding: 2.5rem 0;
+  padding: 3.5rem 0;
   background: #222;
   border-top: 5px solid $black_alt;
-  border-bottom: 5px solid $black_alt;
+  // border-bottom: 5px solid $black_alt;
 }
 .footer__logo {
-  width: 225px;
-  margin: 5px 0 0 0;
+  width: 175px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  border-right: 3px solid #333;
 }
 .contact {
   margin: 20px 0;
@@ -55,4 +57,99 @@ footer {
   margin: 0;
   color: $white;
   text-transform: uppercase;
+}
+.footer__form {
+  display: flex;
+  flex-direction: row;
+}
+.footer__input-names {
+  display: flex;
+  flex-direction: row;
+}
+.footer__input-name {
+  flex: 1;
+  display: block;
+  font-family: $font_light;
+  padding: 1.3rem;
+  font-size: 1.8rem;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: #eee;
+  height: 45px;
+  margin: 0 5px 5px 0;
+  font-size: 1.4rem;
+  border-radius: 2px;
+}
+.footer__input {
+  flex: 1;
+  display: block;
+  font-family: $font_light;
+  padding: 1.3rem;
+  font-size: 1.8rem;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: #333;
+  height: 45px;
+  margin: 0 5px 0 0;
+  font-size: 1.4rem;
+  border-radius: 2px;
+}
+.footer__btn {
+  background: $primary_color;
+  color: #fff;
+  height: 45px;
+  padding: 0 25px;
+  border-radius: 0;
+  text-decoration: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: $primary_color;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: $font_regular;
+  border-radius: 2px;
+}
+.footer__btn:hover, .footer__btn:focus {
+  background: $primary_color_alt;
+}
+.footer__container {
+  h3 {
+    font-family: $font_bold;
+    color: #777;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  ul {
+    list-style: none;
+    li {
+      font-family: $font_light;
+      color: #eee;
+      font-size: 1.4rem;
+    }
+  }
+}
+.footer_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+  border-top: 2px solid #333;
+  padding: 3.5rem 0 0 0;
+}
+.footer_bottom__content {
+
+}
+.footer_bottom__text {
+  margin: 0;
+  color: #eee;
+  padding: 0 0 0 20px;
+  font-family: $font_light;
+  font-size: 1.2rem;
 }
