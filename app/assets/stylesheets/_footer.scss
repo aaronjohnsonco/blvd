@@ -118,22 +118,22 @@ footer {
 .footer__btn:hover, .footer__btn:focus {
   background: $primary_color_alt;
 }
-.footer__container {
-  h3 {
-    font-family: $font_bold;
-    color: #777;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-  }
-  ul {
-    list-style: none;
-    li {
-      font-family: $font_light;
-      color: #eee;
-      font-size: 1.4rem;
-    }
-  }
-}
+// .footer__container {
+//   h3 {
+//     font-family: $font_bold;
+//     color: #777;
+//     font-size: 1.4rem;
+//     text-transform: uppercase;
+//   }
+//   ul {
+//     list-style: none;
+//     li {
+//       font-family: $font_light;
+//       color: #eee;
+//       font-size: 1.4rem;
+//     }
+//   }
+// }
 .footer_bottom {
   display: flex;
   flex-direction: row;
@@ -158,6 +158,22 @@ footer {
 
 // /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+  .footer__container {
+    h3 {
+      font-family: $font_bold;
+      color: #777;
+      font-size: 2.1rem;
+      text-transform: uppercase;
+    }
+    ul {
+      list-style: none;
+      li {
+        font-family: $font_thin;
+        color: #eee;
+        font-size: 1.9rem;
+      }
+    }
+  }
   .footer_bottom {
     display: flex;
     flex-direction: column;
@@ -191,6 +207,22 @@ footer {
 
 // /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+  .footer__container {
+    h3 {
+      font-family: $font_bold;
+      color: #777;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    ul {
+      list-style: none;
+      li {
+        font-family: $font_light;
+        color: #eee;
+        font-size: 1.4rem;
+      }
+    }
+  }
   .footer_bottom {
     display: flex;
     flex-direction: row;
