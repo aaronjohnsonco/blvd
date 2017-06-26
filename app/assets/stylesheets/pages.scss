@@ -15,6 +15,7 @@ body {
   position: relative;
 }
 
+
 @font-face {
   font-family: 'RobotoThin';
   src: font_url('Roboto-Thin.ttf');
@@ -46,3 +47,4 @@ body {
 @import 'available';
 @import 'detail';
 @import 'custom-bootstrap';
+@import 'contact';
