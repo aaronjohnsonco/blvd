@@ -3,11 +3,11 @@
 .touch {
   padding: 5.0rem 0;
 }
-.touch__header {
-  font-family: $font_black;
-  font-size: 4.0rem;
-  margin: 0 0 5px 0;
-}
+// .touch__header {
+//   font-family: $font_black;
+//   font-size: 4.0rem;
+//   margin: 0 0 5px 0;
+// }
 .touch__text {
   font-family: $font_light;
   font-size: 1.6rem;
@@ -128,6 +128,11 @@ select::-ms-expand {
     font-size: 1.4rem;
     font-family: $font_regular;
     border-radius: 2px;
+  }
+  .touch__header {
+    font-family: $font_black;
+    font-size: 3.0rem;
+    margin: 0 0 5px 0;
   }
 }
 
