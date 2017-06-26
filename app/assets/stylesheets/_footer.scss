@@ -230,20 +230,21 @@
     ul {
       list-style: none;
       li {
-        font-family: $font_light;
-        color: #eee;
-        font-size: 1.4rem;
-        a {
-          color: $white !important;
-          -webkit-transition: all 0.5s;
-          transition: all 0.5s;
-        }
-        a:hover, a:focus {
-          color: $primary_color !important;
-          text-decoration: none;
-        }
+          font-family: $font_light;
+          color: #eee;
+          font-size: 1.4rem;
+      }
+      a {
+        color: $white !important;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      a:hover, a:focus {
+        color: $primary_color !important;
+        text-decoration: none;
       }
     }
+
   }
   .footer_bottom {
     display: flex;
