@@ -179,6 +179,15 @@
         color: #eee;
         font-size: 1.9rem;
       }
+      a {
+        color: #fff !important;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      a:hover, a:focus {
+        color: $primary_color !important;
+        text-decoration: none;
+      }
     }
   }
   .footer_bottom {
@@ -235,7 +244,7 @@
           font-size: 1.4rem;
       }
       a {
-        color: $white !important;
+        color: #fff !important;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
       }
