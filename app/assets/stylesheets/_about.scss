@@ -1,0 +1,57 @@
+@import 'variables';
+
+.about {
+  padding: 5.0rem 0;
+  blockquote {
+    font-family: $font_light !important;
+    font-size: 2.5rem !important;
+    border-width: 10px !important;
+    span {
+      font-family: $font_regular;
+      font-size: 2.0rem;
+      text-align: right;
+      color: #999;
+    }
+  }
+}
+.about__header{
+  font-family: $font_light;
+  font-size: 4.0rem;
+  margin: 0 0 15px 0;
+  // text-transform: uppercase;
+}
+.about__text {
+  font-family: $font_light;
+  font-size: 1.6rem;
+}
+.about__title {
+  font-family: $font_light;
+  font-size: 3.5rem;
+  padding: 0 0 5px 0;
+  border-bottom: 3px solid #eee;
+  margin: 0 0 20px 0;
+}
+.staff_list {
+  clear: both;
+  overflow: hidden;
+  margin: 0 0 40px 0;
+}
+.staff_list__img {
+  width: 200px;
+  float:left;
+}
+.staff_list__header {
+  font-family: $font_bold;
+  margin: 0 0 0 230px;
+  font-size: 3.0rem;
+}
+.staff_list__subheader {
+  font-family: $font_light;
+  font-size: 2.0rem;
+  margin: 0 0 0 230px;
+}
+.staff_list__text {
+  font-family: $font_light;
+  font-size: 1.6rem;
+  margin: 0 0 0 230px;
+}
