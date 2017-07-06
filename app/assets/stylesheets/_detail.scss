@@ -105,6 +105,100 @@
   .move_price {
     text-align: right;
   }
+  .panel-group {
+    margin-bottom: 20px;
+  }
+  .panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 2px;
+  }
+  .panel-group .panel + .panel {
+    margin-top: 5px;
+  }
+  .panel-group .panel-heading {
+    border-bottom: 0;
+  }
+  .panel-group .panel-heading + .panel-collapse > .panel-body,
+  .panel-group .panel-heading + .panel-collapse > .list-group {
+    border-top: 1px solid #ddd;
+  }
+  .panel-group .panel-footer {
+    border-top: 0;
+  }
+  .panel-group .panel-footer + .panel-collapse .panel-body {
+    border-bottom: 1px solid #ddd;
+  }
+
+
+  // a.panel-heading {
+  //   display: block;
+  // }
+  //
+  // .panel-detail .panel-heading[aria-expanded="true"], .panel-detail .panel-heading a:hover, .panel-detail .panel-heading a:focus, .panel-detail a.panel-heading:hover, .panel-detail a.panel-heading:focus {
+  // 	background-color: #dcdcdc;
+  // }
+  //
+  // .panel-group .panel, .panel-group .panel-heading {
+  // 	border: none !important;
+  // }
+  // .panel-group .panel-body {
+  // 	border: 1px solid #ddd !important;
+  // 	border-width: 0 1px 1px 1px !important;
+  // }
+  // .panel-group .panel-heading a, .panel-group a.panel-heading {
+  // 	outline: 0;
+  // }
+  // .panel-group .panel-heading a:hover, .panel-group .panel-heading a:focus, .panel-group a.panel-heading:hover, .panel-group a.panel-heading:focus {
+  // 	text-decoration: none;
+  // }
+  // .panel-group .panel-heading .icon-indicator {
+  // 	margin-right: 10px;
+  // }
+
+
+
+  .panel-title a {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .panel-title a:hover {
+    text-decoration: none !important;
+    color: $white;
+  }
+  .panel-title a:focus {
+    text-decoration: none !important;
+  }
+
+  .panel-detail.active .panel-heading {
+    background-color: $primary_color;
+    color: $white;
+  }
+
+  .panel-detail {
+    border-color: #ddd;
+  }
+  .panel-detail > .panel-heading {
+    color: $black_dim;
+    background-color: $black;
+    border-color: $black;
+    font-family: $font_black;
+    text-transform: uppercase;
+  }
+
+  // .panel-detail .panel-heading[aria-expanded="true"], .panel-detail .panel-heading a:hover, .panel-detail .panel-heading a:focus, .panel-detail a.panel-heading:hover, .panel-detail a.panel-heading:focus {
+  // 	background-color: $primary_color;
+  // }
+  .panel-detail > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+  }
+  .panel-detail > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+  }
+  .panel-detail > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #ddd;
+  }
 }
 
 // /* Medium Devices, Desktops */
