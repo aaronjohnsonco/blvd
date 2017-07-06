@@ -3,7 +3,7 @@
 .links {
   position: relative;
   margin: 0 0 20px 0;
-  border: 5px solid $black_light;
+  border: 4px solid $black_light;
   .links__header {
     position: absolute;
     left: 0;
@@ -24,28 +24,22 @@
     position: relative;
   }
   .light_text {
-    font-family: $font_thin;
+    font-family: $font_light;
   }
+  .links_arrow {
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    right: 0;
+  }
+
 }
 .links:hover {
   .links__header {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: $white;
     background: rgba(208, 1, 27, 0.7);
-    right: 0;
-    margin: 0;
-    padding: 5px;
-    font-size: 1.8rem;
-    font-family: $font_bold;
-    text-transform: uppercase;
   }
-  .sidebar__image {
-    width: 100%;
-    position: relative;
-  }
-  .light_text {
-    font-family: $font_thin;
+  .links_arrow {
+    opacity: 1;
+    right: -1rem;
   }
 }
