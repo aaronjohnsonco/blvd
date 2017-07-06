@@ -56,7 +56,16 @@
 .community__header {
   font-family: $font_bold;
   font-size: 2.3rem;
-  margin: 0;
+  margin: 0 0 10px 0;
+}
+.community__subheader {
+  font-family: $font_bold;
+  color: $primary_color;
+  font-size: 2.1rem;
+  padding: 0 0 5px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid $black_light;
+  text-transform: uppercase;
 }
 .community__text {
   font-family: $font_light;
@@ -129,34 +138,6 @@
     border-bottom: 1px solid #ddd;
   }
 
-
-  // a.panel-heading {
-  //   display: block;
-  // }
-  //
-  // .panel-detail .panel-heading[aria-expanded="true"], .panel-detail .panel-heading a:hover, .panel-detail .panel-heading a:focus, .panel-detail a.panel-heading:hover, .panel-detail a.panel-heading:focus {
-  // 	background-color: #dcdcdc;
-  // }
-  //
-  // .panel-group .panel, .panel-group .panel-heading {
-  // 	border: none !important;
-  // }
-  // .panel-group .panel-body {
-  // 	border: 1px solid #ddd !important;
-  // 	border-width: 0 1px 1px 1px !important;
-  // }
-  // .panel-group .panel-heading a, .panel-group a.panel-heading {
-  // 	outline: 0;
-  // }
-  // .panel-group .panel-heading a:hover, .panel-group .panel-heading a:focus, .panel-group a.panel-heading:hover, .panel-group a.panel-heading:focus {
-  // 	text-decoration: none;
-  // }
-  // .panel-group .panel-heading .icon-indicator {
-  // 	margin-right: 10px;
-  // }
-
-
-
   .panel-title a {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -182,7 +163,8 @@
     color: $black_dim;
     background-color: $black;
     border-color: $black;
-    font-family: $font_black;
+    font-family: $font_regular;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
 
