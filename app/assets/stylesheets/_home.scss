@@ -267,10 +267,40 @@ span.builders {
      padding: 5.0rem 0;
      border-bottom: 1px solid $black_light;
    }
-   
    .welcome_contact {
-     border-left: 3px solid $black_light;
+
+   }
+   .welcome_contact_header {
+     font-family: $font_black;
+     font-size: 3.0rem;
+     margin: 0;
+     color: $black;
+   }
+   .welcome_contact_text {
+     font-family: $font_light;
+     font-size: 1.6rem;
+   }
+
+   .welcome_container {
+     display: flex;
+     flex-direction: row;
+   }
+   .welcome_message {
+     width: 50%;
+    }
+   .welcome-form: {
+     width: 50%;
+   }
+
+
+   .welcome_main {
+     padding: 5.0rem 0;
+     border-bottom: 1px solid $black_light;
+   }
+
+   .welcome_contact {
      padding: 0 0 0 30px;
+     border-left: 3px solid $black_light;
    }
    .welcome_contact_header {
      font-family: $font_black;
@@ -702,25 +732,31 @@ span.builders {
 
  // /* Small Devices, Tablets */
  @media only screen and (min-width : 768px) {
+   #welcome {
 
-   .welcome_main {
-     padding: 5.0rem 0;
+
+   }
+   .welcome_container {
+     padding: 5rem 0;
+     display: inline-flex;
+     flex-direction: row;
+     flex: 1;
+     justify-content: center;
+     align-items: stretch;
      border-bottom: 1px solid $black_light;
    }
+   .welcome_message {
+     width: 100%;
+    }
+   .welcome_form: {
+     width: 100%;
+   }
    .welcome_contact {
-     border-left: 3px solid $black_light;
-     padding: 0 0 0 30px;
+
    }
-   .welcome_contact_header {
-     font-family: $font_black;
-     font-size: 3.0rem;
-     margin: 0;
-     color: $black;
-   }
-   .welcome_contact_text {
-     font-family: $font_light;
-     font-size: 1.6rem;
-   }
+
+
+
 
    .logo__img {
      width: 250px;
