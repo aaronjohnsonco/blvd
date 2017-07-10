@@ -1,5 +1,12 @@
 @import 'variables';
 
+#detail_header {
+  background: image-url('header2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 4px solid $black_border;
+}
 #detail {
   padding: 5rem 0;
 }

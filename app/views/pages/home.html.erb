@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-10">
         <div class="hero">
-          <h1 class="hero__header fadeInDown animated">Your Dream Home Awaits</h1>
+          <h1 class="hero__header fadeInDown animated">Welcome Home!</h1>
           <p class="hero__sub fadeIn animated">Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore.</p>
           <a href="" class="hero__btn fadeInUp animated">Learn More</a>
         </div>
@@ -29,52 +29,76 @@
   <!-- Welcome -->
   <section id="welcome">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-12 border_btm">
-          <h2 class="welcome__header">Welcome<br/>to <span class="blvd">Blvd</span><span class="builders">Homes</span></span></h2>
-          <p class="welcome__text">Boulevard Homes is a home design and construction company.  We believe in constructing homes with an emphasis on style and strive to create one of a kind homes for you and your family to enjoy!  Building in Metro Nashville, TN and throughout Williamson county including Franklin, Brentwood and Fairview.  Look for our custom homes in Ladd Park Subdivision in Franklin, TN!</p>
+      <div class="welcome_main">
+        <div class="row">
+          <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-7">
+            <h2 class="welcome__header">Welcome<br/>to <span class="blvd">Blvd</span><span class="builders">Homes</span></span></h2>
+            <p class="welcome__text">Boulevard Homes is a home design and construction company.  We believe in constructing homes with an emphasis on style and strive to create one of a kind homes for you and your family to enjoy!  Building in Metro Nashville, TN and throughout Williamson county including Franklin, Brentwood and Fairview.  Look for our custom homes in Ladd Park Subdivision in Franklin, TN!</p>
+          </div>
+          <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-5">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OPTIONS -->
+
+  <section id="home_menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="/home" class="home_menu__link">
+          <div class="home_menu_item">
+              <%= image_tag 'home_alt.png', class: 'home_menu_item__img' %>
+              <h3 class="home_menu_item__header">Move-In-Ready Homes <span class="glyphicon glyphicon-arrow-right links_arrow" aria-hidden="true"></span></h3>
+              <!-- <p class="home_menu_item__text">View out completed and nearly completed homes</p>
+              <p class="home_menu_item__btn"><a href="/homes" class="option__btn">View Homes</a></p> -->
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <div class="home_menu_item">
+            <%= image_tag 'home1_alt.png', class: 'home_menu_item__img' %>
+            <h3 class="home_menu_item__header">Communities <span class="glyphicon glyphicon-arrow-right links_arrow" aria-hidden="true"></span></h3>
+            <!-- <p class="home_menu_item__text">View the communities where our homes are offered.</p>
+            <p class="home_menu_item__btn"><a href="/homes" class="option__btn">View Communities</a></p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="home_menu_item">
+            <%= image_tag 'home_alt.png', class: 'home_menu_item__img' %>
+            <h3 class="home_menu_item__header">Home Plans <span class="glyphicon glyphicon-arrow-right links_arrow" aria-hidden="true"></span></h3>
+            <!-- <p class="home_menu_item__text">View current home plans being offered.</p>
+            <p class="home_menu_item__btn"><a href="/homes" class="option__btn">View Plans</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- OPTIONS
   <section id="options">
 
     <div class="container">
       <div class="row">
         <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-12">
-          <!-- <div class="row">
-            <div class="col-md-4">
-              <%= image_tag 'home.png', class: 'option__img-pic' %>
-              <h2 class="option__header">Move-In Ready</h2>
-              <a href="#" class="option__btn">Learn More</a>
-            </div>
-            <div class="col-md-4">
-              <%= image_tag 'home2.png', class: 'option__img-pic' %>
-              <h2 class="option__header">Our Communities</h2>
-              <a href="#" class="option__btn">Learn More</a>
-            </div>
-            <div class="col-md-4">
-              <%= image_tag 'home3.png', class: 'option__img-pic' %>
-              <h2 class="option__header">Floor Plans</h2>
-              <a href="#" class="option__btn">Learn More</a>
-            </div>
-          </div> -->
 
           <div class="option">
             <div class="option__img">
-              <%= image_tag 'home.png', class: 'option__img-pic' %>
+              <%= image_tag 'home_alt.png', class: 'option__img-pic' %>
             </div>
             <div class="option__content">
               <h2 class="option__header">Move-in Ready Homes</h2>
-              <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="option__text">View our completed or nearly completed homes.</p>
               <a href="/homes" class="option__btn">View Homes</a>
             </div>
           </div>
           <div class="option_reverse">
             <div class="option__img">
-              <%= image_tag 'home2.png', class: 'option__img-pic' %>
+              <%= image_tag 'home1_alt.png', class: 'option__img-pic' %>
             </div>
             <div class="option__content">
               <h2 class="option__header">Communities</h2>
@@ -99,43 +123,7 @@
       </div>
     </div>
 
-
-
-
-    <!-- <div class="container">
-      <div class="option">
-        <div class="option__img">
-          <%= image_tag 'home.png', class: 'option__img-pic' %>
-        </div>
-        <div class="option__content">
-          <h2 class="option__header">Move-in Ready Homes</h2>
-          <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <a href="#" class="option__btn">Learn More</a>
-        </div>
-      </div>
-      <div class="option_reverse">
-        <div class="option__img">
-          <%= image_tag 'home2.png', class: 'option__img-pic' %>
-        </div>
-        <div class="option__content">
-          <h2 class="option__header">Communities</h2>
-          <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <a href="#" class="option__btn">Learn More</a>
-        </div>
-      </div>
-      <div class="option">
-        <div class="option__img">
-          <%= image_tag 'home3.png', class: 'option__img-pic' %>
-        </div>
-        <div class="option__content">
-          <h2 class="option__header">Floor Plans</h2>
-          <p class="option__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <a href="#" class="option__btn">Learn More</a>
-        </div>
-      </div>
-    </div> -->
-
-  </section>
+  </section> -->
 
   <!-- FEATURES -->
   <!-- <section id="features">
