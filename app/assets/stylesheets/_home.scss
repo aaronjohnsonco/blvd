@@ -258,6 +258,13 @@ span.builders {
 
 // /* Custom, iPhone Retina */
  @media only screen and (min-width : 320px) {
+
+   .welcome_main {
+     padding: 5.0rem 0;
+     border-bottom: 1px solid $black_light;
+   }
+
+   
    .logo__img {
      width: 175px;
      margin: 5px 0 0 10px;
@@ -362,7 +369,7 @@ span.builders {
      }
    }
 
-   
+
    .option {
      display: flex;
      flex-direction: column;
