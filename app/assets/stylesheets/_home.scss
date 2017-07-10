@@ -11,6 +11,9 @@
   background-position: center;
   background-size: cover;
 }
+.light_text {
+  font-family: $font_light;
+}
 // .hero {
 //   display: flex;
 //   flex-direction: column;
@@ -776,7 +779,7 @@ span.builders {
      transition: all 0.5s;
    }
    .home_menu_item__header {
-     font-family: $font_regular;
+     font-family: $font_black;
      margin: -1px 0 0 0;
      font-size: 1.7rem;
      text-transform: uppercase;
