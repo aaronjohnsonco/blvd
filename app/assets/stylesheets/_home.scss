@@ -95,6 +95,7 @@ span.builders {
   font-family: $font_light;
   margin: 0;
   font-size: 1.8rem;
+  margin: 0 0 20px 0;
 }
 .border_btm {
   padding-bottom: 50px;
@@ -266,7 +267,21 @@ span.builders {
      padding: 5.0rem 0;
      border-bottom: 1px solid $black_light;
    }
-
+   
+   .welcome_contact {
+     border-left: 3px solid $black_light;
+     padding: 0 0 0 30px;
+   }
+   .welcome_contact_header {
+     font-family: $font_black;
+     font-size: 3.0rem;
+     margin: 0;
+     color: $black;
+   }
+   .welcome_contact_text {
+     font-family: $font_light;
+     font-size: 1.6rem;
+   }
 
    .logo__img {
      width: 175px;
@@ -691,6 +706,20 @@ span.builders {
    .welcome_main {
      padding: 5.0rem 0;
      border-bottom: 1px solid $black_light;
+   }
+   .welcome_contact {
+     border-left: 3px solid $black_light;
+     padding: 0 0 0 30px;
+   }
+   .welcome_contact_header {
+     font-family: $font_black;
+     font-size: 3.0rem;
+     margin: 0;
+     color: $black;
+   }
+   .welcome_contact_text {
+     font-family: $font_light;
+     font-size: 1.6rem;
    }
 
    .logo__img {
