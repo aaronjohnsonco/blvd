@@ -69,11 +69,12 @@
 }
 .block__text {
   color: $white;
-  font-family: $font_thinital;
-  font-size: 1.8rem;
+  font-family: 'MWLightItal';
+  font-size: 2.0rem;
   padding: 0;
   margin: 0;
   text-align: center;
+  z-index: 10;
 }
 
 #welcome {
@@ -567,7 +568,7 @@ span.builders {
      flex-direction: column;
      justify-content: center;
      align-items: flex-start;
-     min-height: 90vh;
+     min-height: 85vh;
    }
    .hero__header {
      font-family: $font_thin;
@@ -577,7 +578,7 @@ span.builders {
    }
    .hero__sub {
      font-family: $font_thin;
-     font-size: 2.2rem;
+     font-size: 2.8rem;
      color: $white;
      width: 60vw;
    }
@@ -603,6 +604,12 @@ span.builders {
      border-color: $white;
      text-decoration: none !important;
    }
+
+   .quotes__img {
+     width: 50px;
+     margin: -10px 0 0 0;
+   }
+
 
    #welcome {
 
@@ -679,6 +686,8 @@ span.builders {
      margin: 0 0 20px 0;
      position: relative;
      border: 4px solid $black_light;
+     -webkit-transition: all 0.5s;
+     transition: all 0.5s;
      .home_menu_item__header {
        position: absolute;
        left: 0;
@@ -694,7 +703,22 @@ span.builders {
        -webkit-transition: all 0.5s;
        transition: all 0.5s;
      }
+     .home_menu_item__description {
+       position: absolute;
+       left: 0;
+       top: -30px;
+       margin: 0;
+       font-family: $font_bold;
+       color: $white;
+       font-size: 2.0rem;
+       padding: 5px;
+       -webkit-transition: all 0.5s;
+       transition: all 0.5s;
+       opacity: 0;
+       text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
+     }
    }
+
 
    .home_menu_item__img {
      width: 100%;
@@ -702,6 +726,7 @@ span.builders {
    }
 
    .home_menu_item:hover {
+     border: 4px solid $black_light_alt;
      .home_menu_item__header {
        background: rgba(208, 1, 27, 0.7)
      }
@@ -709,7 +734,13 @@ span.builders {
        opacity: 1;
        right: -1rem;
      }
+     .home_menu_item__description {
+       opacity: 1;
+       top: 0rem;
+     }
    }
+
+
 
 
   //  .home_menu_item__text {

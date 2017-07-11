@@ -41,6 +41,30 @@ body {
   font-family: 'RobotoThinItal';
   src: font_url('Roboto-ThinItalic.ttf');
 }
+@font-face {
+  font-family: 'MWLight';
+  src: font_url('Merriweather-Light.ttf');
+}
+@font-face {
+  font-family: 'MWRegular';
+  src: font_url('Merriweather-Regular.ttf');
+}
+@font-face {
+  font-family: 'MWBold';
+  src: font_url('Merriweather-Bold.ttf');
+}
+@font-face {
+  font-family: 'MWUltraBold';
+  src: font_url('Merriweather-UltraBold.ttf');
+}
+@font-face {
+  font-family: 'MWLightItal';
+  src: font_url('Merriweather-LightIt');
+}
+@font-face {
+  font-family: 'MWRegularItal';
+  src: font_url('Merriweather-Italic');
+}
 
 
 @import 'home';
