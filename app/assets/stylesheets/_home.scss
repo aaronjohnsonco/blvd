@@ -301,6 +301,7 @@ span.builders {
 
    .welcome_contact {
      padding: 0;
+     margin-top: 30px;
    }
    .welcome_contact_header {
      font-family: $font_black;
@@ -588,6 +589,7 @@ span.builders {
      margin: 0 0 20px 0;
    }
    .welcome_contact {
+     margin: 0;
      padding: 0 0 0 30px;
      border-left: 3px solid $black_light;
    }
