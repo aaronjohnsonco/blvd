@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :homes
+  resources :communities
   get 'pages/home'
-  get 'homes', to: 'pages#available'
+  get 'home', to: 'pages#available'
   get 'detail', to: 'pages#detail'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
