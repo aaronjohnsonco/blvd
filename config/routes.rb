@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  devise_for :users
   resources :homes
   resources :communities
+  get 'dashboard', to: 'dashboard#index'
+  get 'dashboard/new-home', to: 'dashboard#new_home'
   get 'pages/home'
   get 'home', to: 'pages#available'
   get 'detail', to: 'pages#detail'
