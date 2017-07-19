@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'detail', to: 'pages#detail'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
-  get 'communities', to: 'pages#communities'
+  get 'community', to: 'pages#communities'
   get 'our-warranty', to: 'pages#warranty'
   root to: 'pages#home'
 
