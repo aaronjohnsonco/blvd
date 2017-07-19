@@ -65,6 +65,10 @@ body {
   font-family: 'MWRegularItal';
   src: font_url('Merriweather-Italic');
 }
+@font-face {
+  font-family: 'CorLightItal';
+  src: font_url('Cormorant-LightItalic.otf');
+}
 
 
 @import 'home';
