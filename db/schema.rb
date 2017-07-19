@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712182507) do
+ActiveRecord::Schema.define(version: 20170714140645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20170712182507) do
   create_table "communities", force: :cascade do |t|
     t.string   "name"
     t.text     "overview"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_images", force: :cascade do |t|
+    t.string   "image"
+    t.integer  "home_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +46,17 @@ ActiveRecord::Schema.define(version: 20170712182507) do
     t.string   "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "plan"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "home_id"
   end
 
   create_table "users", force: :cascade do |t|

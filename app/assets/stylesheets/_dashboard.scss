@@ -1,5 +1,41 @@
 @import 'variables';
 
+.dashnav_container {
+  background: #ddd;
+  width: 250px;
+  padding: 4rem 3rem;
+  height: 100vh;
+  background: $black;
+  float: left;
+  h3 {
+    margin:0;
+    font-family: $font_bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin: 0 0 20px 0;
+    color: #777;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 0 0 30px 0;
+    font-family: $font_light;
+    font-size: 1.5rem;
+    color: $black_dim;
+  }
+  a {
+    color: $black_dim;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  a:hover, a:focus {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 #dashboard_main {
   margin-left: 250px;
   padding: 3rem;
@@ -29,6 +65,128 @@
     text-transform: uppercase;
     color: $black_dim;
   }
+}
+
+.dash_icon {
+  width: 20px;
+  margin: 0 0 5px 0;
+}
+
+// BOOTSTRAP EXAMPLE CSS
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+// body {
+//   padding-top: 50px;
+// }
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    // top: 51px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: $black;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #777 !important;
+  font-family: $font_light;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:focus {
+  background: #444;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff !important;
+  background-color: $primary_color;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+  font-family: $font_light;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
 }
 
 // DASHBOARD NEW HOME

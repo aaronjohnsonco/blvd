@@ -1,7 +1,7 @@
 @import 'variables';
 
 #detail_header {
-  background: image-url('header2.png');
+  background: image-url('header_alt.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,6 +43,7 @@
 
 .detail__img {
   width: 100%;
+  border: 5px solid $black_light;
 }
 
 .add_views {

@@ -16,4 +16,8 @@ class PagesController < ApplicationController
 
   def communities
   end
+
+  def warranty
+  end
+  
 end
