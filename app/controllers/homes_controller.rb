@@ -6,9 +6,6 @@ class HomesController < ApplicationController
   def create
     @home = Home.new(home_params)
     if @home.save
-      params[:home_images][:image].each do |img|
-        @image = @home.home_images.create(image: params[:home_images][:image])
-      end
       redirect_to dashboard_homes_path
     else
       redirect_to dashboard_new_home_path
@@ -46,7 +43,7 @@ class HomesController < ApplicationController
         :garage,
         :status,
         :plan,
-        home_images_attributes: [:id, :home_id, :image, :_destroy]
+        home_images_attributes: [:image]
       )
     end
 end

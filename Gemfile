@@ -58,7 +58,8 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'devise'
 gem 'carrierwave', '~> 0.10.0'
-gem 'mini_magick', '~> 4.3'
+# gem 'mini_magick', '~> 4.3'
+gem 'rmagick'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
