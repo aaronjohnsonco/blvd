@@ -43,7 +43,7 @@ class HomesController < ApplicationController
         :garage,
         :status,
         :plan,
-        home_images_attributes: [:image]
+        home_images_attributes: [:id, :photo, :home_id]
       )
     end
 end
