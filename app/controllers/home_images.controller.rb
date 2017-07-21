@@ -7,6 +7,7 @@ class HomeImagesController < ApplicationController
       redirect_to dashboard_homes_path
     else
       redirect_to root_path
+    end
   end
 
   private
