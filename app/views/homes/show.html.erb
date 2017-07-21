@@ -1,0 +1,7 @@
+<h1><%= @home.plan %></h1>
+
+<%= form_for([@home, @home.home_images.build]) do |f| %>
+  <label>Add Photo</label>
+  <%= f.file_field :photo, multiple: true  %>
+  <%= f.submit 'Add Photo' %>
+<% end %>

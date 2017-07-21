@@ -1,0 +1,7 @@
+<% for home in @homes %>
+  <p><%= link_to home.plan, home_path(home) %></p>
+  <p>
+    <%= link_to "Edit", edit_home_path(home), class: 'btn btn-default' %>
+    <%= link_to "Delete", home, data: {confirm: 'Are you sure?'}, method: :delete %>
+  </p>
+<% end %>

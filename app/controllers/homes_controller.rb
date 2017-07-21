@@ -1,6 +1,17 @@
 class HomesController < ApplicationController
 
   def index
+    @homes = Home.all
+  end
+
+
+
+  def show
+    @home = Home.find(params[:id])
+  end
+
+  def new
+    @home = Home.new
   end
 
   def create
@@ -12,16 +23,20 @@ class HomesController < ApplicationController
     end
   end
 
-  def show
-  end
+
 
   def edit
+    @home = Home.find(params[:id])
   end
 
   def delete
   end
 
   def destroy
+    @home = Home.find(params[:id])
+    @home.destroy
+
+    redirect_to homes_path
   end
 
   private
@@ -42,8 +57,7 @@ class HomesController < ApplicationController
         :bedrooms,
         :garage,
         :status,
-        :plan,
-        home_images_attributes: [:id, :photo, :home_id]
+        :plan
       )
     end
 end

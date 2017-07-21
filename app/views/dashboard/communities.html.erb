@@ -4,7 +4,7 @@
       <%= render 'partials/dashboard-nav' %>
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1 class="page-header">Homes
+      <h1 class="page-header">Communities
         <%= link_to 'Add New', new_home_path, class: 'btn btn-default pull-right' %>
       </h1>
 
@@ -18,7 +18,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Plan</th>
+              <th>Community</th>
               <th>Description</th>
               <th>Header</th>
               <th>Header</th>
@@ -26,15 +26,14 @@
             </tr>
           </thead>
           <tbody>
-            <% for home in @homes %>
+
             <tr>
-              <td><%= link_to home.plan, edit_home_path(home) %></td>
-              <td><%= home.description %></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
-            <% end %>
 
           </tbody>
         </table>
