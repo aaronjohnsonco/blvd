@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <%= render 'partials/dashboard-nav' %>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">New Community</h1>
+      <%= form_for @community do |f| %>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="form-group">
+            <label>Community Name</label>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Community Name' %>
+          </div>
+          <div class="form-group">
+            <label>Community Description</label>
+            <%= f.text_area :overview, class: 'form-control', placeholder: 'Add community description' %>
+          </div>
+          <div class="form-group">
+            <label>School System Title</label>
+            <%= f.text_field :school_title, class: 'form-control', placeholder: 'School County' %>
+          </div>
+          <div class="form-group">
+            <label>High School</label>
+            <%= f.text_field :highschool, class: 'form-control', placeholder: 'High School' %>
+          </div>
+          <div class="form-group">
+            <label>Middle School</label>
+            <%= f.text_field :middleschool, class: 'form-control', placeholder: 'Middle School' %>
+          </div>
+          <div class="form-group">
+            <label>Elementary School</label>
+            <%= f.text_field :elementaryschool, class: 'form-control', placeholder: 'Elementary School' %>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="row">
+
+          </div>
+        </div>
+
+      </div>
+
+        <%= f.submit 'Add Community', class: 'btn btn-default' %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

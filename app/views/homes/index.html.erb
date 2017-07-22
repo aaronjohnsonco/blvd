@@ -1,7 +1,83 @@
-<% for home in @homes %>
+<%= render 'partials/navbar' %>
+
+<header id="available_header">
+  <div class="secondary_header">
+    <div class="secondary_header__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="secondary_header__text">Homes Available Now</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="available_main">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="available_intro_text">If you’re looking for a new home that’s ready to move into today, we have several just completed and waiting for you in any one of our developments.  If those ready to move in homes aren't right for you-don't worry, you have the ability to start from scratch and select your lot, plan, elevation and finishes.  Call us today at <span class="bold">615-252-6781</span>!</p>
+      </div>
+    </div>
+    <div class="row">
+      <% for home in @homes %>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="home">
+          <%= image_tag 'gw_home.png', class: 'home__img' %>
+          <div class="home_address">
+            <p class="home_address__text">
+              <span class="street">
+                <span class="bold"><%= home.plan %></span><br/>
+                <%= home.address %>
+              </span><br/>
+              <%= home.city %>, <%= home.state %> <%= home.zip %><br/>
+              <%= home.lot %>
+            </p>
+          </div>
+          <div class="home_details">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p class="home_details__text">
+                  Price: $<%= home.price %><br/>
+                  Status: <%= home.status %><br/>
+                  SQ FT: <%= home.sqft %>
+                </p>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p class="home_details__text">
+                  Bedrooms: <%= home.bedrooms %><br/>
+                  Bathrooms: <%= home.baths %><br/>
+                  Garages: <%= home.garage %>
+                </p>
+              </div>
+              <div class="col-xs-12">
+                <p class="home_details__text">
+                  Community: <%= home.community.name %>
+                </p>
+              </div>
+              <div class="col-md-12 view_btn">
+                <%= link_to 'View Detail', home, class: 'home__link' %>
+                <!-- <a href="/detail" class="home__link">View Detail</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+</main>
+
+<%= render 'partials/footer' %>
+
+
+<!-- <% for home in @homes %>
   <p><%= link_to home.plan, home_path(home) %></p>
   <p>
     <%= link_to "Edit", edit_home_path(home), class: 'btn btn-default' %>
     <%= link_to "Delete", home, data: {confirm: 'Are you sure?'}, method: :delete %>
   </p>
-<% end %>
+<% end %> -->

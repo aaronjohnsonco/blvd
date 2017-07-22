@@ -4,14 +4,14 @@ class HomesController < ApplicationController
     @homes = Home.all
   end
 
-
-
   def show
     @home = Home.find(params[:id])
+    @features = @home.features.all
   end
 
   def new
     @home = Home.new
+    @home.features.build
   end
 
   def create
@@ -19,24 +19,25 @@ class HomesController < ApplicationController
     if @home.save
       redirect_to dashboard_homes_path
     else
-      redirect_to dashboard_new_home_path
+      redirect_to new_home_path
     end
   end
-
-
 
   def edit
     @home = Home.find(params[:id])
   end
 
-  def delete
+  def update
+    @home = Home.find(params[:id])
+    @home.update(home_params)
+    redirect_to dashboard_homes_path
   end
 
   def destroy
     @home = Home.find(params[:id])
     @home.destroy
 
-    redirect_to homes_path
+    redirect_to dashboard_homes_path
   end
 
   private
@@ -57,7 +58,9 @@ class HomesController < ApplicationController
         :bedrooms,
         :garage,
         :status,
-        :plan
+        :plan,
+        :community_id,
+        features_attributes: [:id, :name, :_destroy]
       )
     end
 end

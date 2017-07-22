@@ -13,7 +13,7 @@ class DashboardController < ApplicationController
   end
 
   def communities
-    @homes = Home.all
+    @communities = Community.all
   end
 
   def settings

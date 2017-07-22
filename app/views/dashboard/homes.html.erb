@@ -7,38 +7,26 @@
       <h1 class="page-header">Homes
         <%= link_to 'Add New', new_home_path, class: 'btn btn-default pull-right' %>
       </h1>
-
-
-
-
-
-
       <h2 class="sub-header">Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Plan</th>
-              <th>Description</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for home in @homes %>
-            <tr>
-              <td><%= link_to home.plan, edit_home_path(home) %></td>
-              <td><%= home.description %></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <% end %>
-
-          </tbody>
-        </table>
-
+      <div>
+        <% for home in @homes %>
+          <p><%= link_to home.plan, edit_home_path(home) %></p>
+          <p><%= home.description %></p>
+          <p><%= home.community.name %></p>
+          <p><%= home.community.overview %></p>
+          <p><%= home.community.school_title %></p>
+          <p><%= home.community.highschool %></p>
+          <p><%= home.community.middleschool %></p>
+          <p><%= home.community.elementaryschool %></p>
+          <p>Features:</p>
+          <% for feature in home.features %>
+            <p><%= feature.name %></p>
+          <% end %>
+          <p>
+            <%= link_to "Edit", edit_home_path(home) %>
+            <%= link_to "Delete", home, data: {confirm: 'Are you sure?'}, method: :delete %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>

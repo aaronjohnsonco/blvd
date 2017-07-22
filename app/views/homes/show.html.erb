@@ -1,7 +1,418 @@
-<h1><%= @home.plan %></h1>
+<%= render 'partials/navbar' %>
 
-<%= form_for([@home, @home.home_images.build]) do |f| %>
-  <label>Add Photo</label>
-  <%= f.file_field :photo, multiple: true  %>
-  <%= f.submit 'Add Photo' %>
-<% end %>
+<script type="text/javascript">
+$(function(){
+  $("#big-image img:eq(0)").nextAll().hide();
+  $(".add_views img").click(function(e){
+      var index = $(this).index();
+      $("#big-image img").eq(index).show().siblings().hide();
+  });
+});
+</script>
+
+<header id="detail_header">
+  <div class="secondary_header">
+    <div class="secondary_header__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="secondary_header__text">Home Details</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="detail">
+  <div class="container">
+    <div class="detail_top">
+      <!-- <div class="address_price">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-8">
+            <h2 class="detail_address">New American</h2>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4">
+            <h2 class="detail_address move_price"><span class="bold">$845,000</span></h2>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-md-8">
+          <div id="big-image">
+            <%= image_tag 'gw_home.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub1.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub2.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub3.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub4.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub5.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub6.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub7.png', class: 'detail__img' %>
+            <%= image_tag 'gw_sub8.png', class: 'detail__img' %>
+          </div>
+          <div class="add_views">
+            <%= image_tag 'gw_home.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub1.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub2.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub3.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub4.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub5.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub6.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub7.png', class: 'add_views__img' %>
+            <%= image_tag 'gw_sub8.png', class: 'add_views__img' %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="detail_community"><%= @home.plan %></p>
+          <p class="detail_description"><%= @home.description %></p>
+          <p class="detail_description_alt">
+            <span class="bold">Community:</span> <%= @home.community.name %><br/>
+            <!-- <span class="bold">Lot#:</span> 23<br/>
+            <span class="bold">SQFT:</span> 2,500<br/>
+            <span class="bold">Stories:</span> 2<br/>
+            <span class="bold">Bedrooms:</span> 4<br/>
+            <span class="bold">Baths:</span> 2.5<br/>
+            <span class="bold">Garage:</span> 2-car -->
+          </p>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">Lot#: </span><%= @home.lot %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">SQFT: </span><%= @home.sqft %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">Bedrooms: </span><%= @home.bedrooms %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">Baths: </span><%= @home.baths %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">Stories: </span><%= @home.stories %></p>
+            </div>
+            <div class="col-md-6">
+              <p class="detail_description_feature"><span class="bold">Garage: </span><%= @home.garage %></p>
+            </div>
+
+          </div>
+
+          <br/>
+
+          <p class="detail_description_alt">
+            <span class="bold">Price:</span> $<%= @home.price %>
+          </p>
+
+          <p class="detail_description_alt">
+            <span class="bold">Address:</span><br/>
+            <%= @home.address %><br/>
+            <%= @home.city %>, <%= @home.state %> <%= @home.zip %>
+          </p>
+
+          <p class="detail_description_feature"><span class="bold">Features:</span></p>
+          <ul class="home_feature_list">
+            <% for feature in @features %>
+              <li><span class="feature_list_item"><%= feature.name %></span></li>
+            <% end %>
+            <!-- <li><span class="feature_list_item">Vaulted Owners' Suite with beams</span></li>
+            <li><span class="feature_list_item">Whirlpool&reg; Stainless Steel Appliances</span></li>
+            <li><span class="feature_list_item">Custom Maple Cabinets</span></li>
+            <li><span class="feature_list_item">Real 3/4" Hardwood Floors</span></li>
+            <li><span class="feature_list_item">Rinnel&reg; Tankless Water Heater</span></li>
+            <li><span class="feature_list_item">8' doors on first door</span></li>
+            <li><span class="feature_list_item">Plenty of closet space with wood shelving</span></li>
+            <li><span class="feature_list_item">Oversized deck</span></li> -->
+          </ul>
+
+
+          <p class="detail_description_alt">
+            <span class="bold">Contact Us:</span><br/>
+            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp;&nbsp; 615-252-6781<br/>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp; contact@blvdhomes.com
+          </p>
+          <!-- <a href="/detail" class="home__link">View Specs</a> -->
+
+          <!-- <p class="detail_spec">
+            Status: For Sale<br/>
+            Community: Logone Falls<br/>
+            SQFT: 3,400<br/>
+            Stories: 2<br/>
+            Bedrooms: 4<br/>
+            Bathrooms: 2.5<br/>
+            Garage: 2
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <div class="community">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="community_info">
+            <p class="community__header">Neighborhood Overview</p>
+            <p class="community__text"><%= @home.community.overview %></p>
+          </div>
+          <div class="school_info">
+            <p class="community__header"><%= @home.community.school_title %></p>
+            <ul class="community_list">
+              <li class="community_list__item"><%= @home.community.elementaryschool %></li>
+              <li class="community_list__item"><%= @home.community.middleschool %></li>
+              <li class="community_list__item"><%= @home.community.highschool %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <%= image_tag 'map.png', class: 'map_image' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="community__header">Additional Finishes & Products Used</p>
+
+          <div class="row">
+            <div class="col-md-6">
+              <p class="community__subheader">Interior</p>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#flooring" aria-expanded="true" aria-controls="flooring">
+                        Floor Coverings
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="flooring" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#trim" aria-expanded="false" aria-controls="trim">
+                        Trim
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="trim" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#cabinet" aria-expanded="false" aria-controls="cabinet">
+                        Cabinets and Vanities
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="cabinet" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#kitchen" aria-expanded="false" aria-controls="kitchen">
+                        Kitchen and Bath
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="kitchen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#insulation" aria-expanded="false" aria-controls="insulation">
+                        HVAC and Insulation
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="insulation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#plumbing" aria-expanded="false" aria-controls="plumbing">
+                        Plumbing
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="plumbing" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#electrical" aria-expanded="false" aria-controls="electrical">
+                        Electrical
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="electrical" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul class="community_list">
+                        <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+                        <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+                        <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="community__subheader">Exterior</p>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#roof" aria-expanded="true" aria-controls="roof">
+                        Collapsible Group Item #1
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="roof" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#windows" aria-expanded="false" aria-controls="windows">
+                        Windows
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="windows" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#veneer" aria-expanded="false" aria-controls="veneer">
+                        Veneer - Brick and Fiber Cement Boards
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="veneer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#garage" aria-expanded="false" aria-controls="garage">
+                        Garage
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="garage" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-detail">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#landscaping" aria-expanded="false" aria-controls="landscaping">
+                        Landscaping
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="landscaping" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- OLD FEATURE
+          <p class="specs__subhead">Floor Coverings</p>
+          <ul class="community_list">
+            <li class="community_list__item">3/4 inch Thick, Nail down Hardwood Flooring throughout the first floor including study, foyer, powder room, dining room, family room & all first floor hallways</li>
+            <li class="community_list__item">Tile floors in all bathrooms & utility room</li>
+            <li class="community_list__item">Frieze carpet in all bedrooms and bonus room with 8 pound pad included</li>
+          </ul>
+-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<%= render 'partials/footer' %>
+<script type="text/javascript">
+    $('#flooring').collapse("hide");
+    $('#roof').collapse("hide");
+    $('.panel-detail').on('show.bs.collapse', function () {
+         $(this).addClass('active');
+    });
+
+    $('.panel-detail').on('hide.bs.collapse', function () {
+         $(this).removeClass('active');
+    });
+</script>

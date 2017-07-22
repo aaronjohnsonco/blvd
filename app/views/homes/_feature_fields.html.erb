@@ -1,0 +1,6 @@
+
+  <div class="nested-fields">
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Add feature' %>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to_remove_association "remove feature", f %>
+  </div>
