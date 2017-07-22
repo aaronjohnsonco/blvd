@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @contact = Contact.new
   end
 
   def available
@@ -9,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 
   def about
@@ -18,6 +20,7 @@ class PagesController < ApplicationController
   end
 
   def warranty
+    @contact = Contact.new
   end
-  
+
 end

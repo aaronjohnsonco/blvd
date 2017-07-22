@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   resources :features
   scope '/dashboard' do
     resources :homes, only: [:new, :edit]

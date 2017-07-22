@@ -42,30 +42,27 @@
             <div class="welcome_contact">
               <h3 class="welcome_contact_header">Get in touch...</h3>
               <p class="welcome_contact_text">Contact sales at <span class="bold">615-252-6781</span>, or use the form below.</p>
-              <form>
+              <%= form_for @contact do |f| %>
                   <div class="row no-gutter">
                     <div class="col-xs-12 col-sm-12 col-md-6">
                       <div class="form-group">
-                        <input type="text" class="touch__input" placeholder="First Name"/>
+                        <%= f.text_field :first_name, class: 'touch__input', placeholder: 'First Name' %>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
                       <div class="form-group">
-                        <input type="text" class="touch__input" placeholder="Last Name"/>
+                        <%= f.text_field :last_name, class: 'touch__input', placeholder: 'Last Name' %>
                       </div>
                     </div>
                   </div>
-
                   <div class="form-group">
-                    <input type="email" class="touch__input" placeholder="Email"/>
+                    <%= f.email_field :email, class: 'touch__input', placeholder: 'Email' %>
                   </div>
-
-
                 <div class="form-group">
-                  <textarea type="text" class="touch__textarea" rows=3 placeholder="Add a messsage..."></textarea>
+                  <%= f.text_area :message, class: 'touch__textarea', rows: 3, placeholder: 'Add a message...' %>
                 </div>
                 <button class="option__btn">Send message</button>
-              </form>
+              <% end %>
             </div>
           </div>
         </div>
