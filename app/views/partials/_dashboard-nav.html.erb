@@ -4,3 +4,14 @@
   <li><a href="/dashboard/communities"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span> Communities</a></li>
   <!-- <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</a></li> -->
 </ul>
+
+<ul class="nav nav-sidebar">
+  <li>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout
+    <% end %>
+  </li>
+
+  <!-- <li><a href="/dashboard/communities"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</a></li> -->
+  <!-- <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</a></li> -->
+</ul>
