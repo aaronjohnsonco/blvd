@@ -61,7 +61,7 @@
                 <div class="form-group">
                   <%= f.text_area :message, class: 'touch__textarea', rows: 3, placeholder: 'Add a message...' %>
                 </div>
-                <button class="option__btn">Send message</button>
+                <%= f.submit "Send message", name: 'home_btn', class: 'option__btn' %>
               <% end %>
             </div>
           </div>
