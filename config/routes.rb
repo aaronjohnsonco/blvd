@@ -27,8 +27,9 @@ Rails.application.routes.draw do
   get 'detail', to: 'pages#detail'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
-  get 'community', to: 'pages#communities'
+  get 'our-communities', to: 'pages#communities'
   get 'our-warranty', to: 'pages#warranty'
+  get 'home-plans', to: 'pages#plans'
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
