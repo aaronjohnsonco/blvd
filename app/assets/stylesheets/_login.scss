@@ -7,19 +7,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #111;
 }
 .login_logo {
   width: 300px;
 }
 
 .login_page__form {
-  width: 450px;
-  border-radius: 3px;
-  padding: 40px;
+  width: 350px;
+  // border-radius: 3px;
+  padding: 0;
   margin: 20px 0 0 0;
-  border-top: 5px solid $primary_color;
-  background: $white;
-  box-shadow: 0 0 15px #888;
+  // border-top: 5px solid $primary_color;
+  // background: $white;
+  // box-shadow: 0 0 15px #888;
 }
 .login_page__input {
   display: block;
@@ -37,7 +38,7 @@
   border-radius: 2px;
 }
 .login__btn {
-  background: $black;
+  background: #333;
   color: #fff;
   height: 45px;
   padding: 0 25px;
@@ -54,4 +55,8 @@
   font-size: 1.4rem;
   font-family: $font_regular;
   border-radius: 2px;
+  width: 350px;
+}
+.login__btn:hover, .login__btn:focus {
+  background: $primary_color;
 }
