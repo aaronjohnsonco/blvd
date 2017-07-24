@@ -17,17 +17,19 @@ class ContactsController < ApplicationController
   end
 
   private
+  def contact_params
+    params.require(:contact).permit(
+      :first_name,
+      :last_name,
+      :email,
+      :phone,
+      :address,
+      :city,
+      :state,
+      :zip,
+      :closing_date,
+      :message
+    )
+  end
 
-  params.require(:contact).permit(
-    :first_name,
-    :last_name,
-    :email,
-    :phone,
-    :address,
-    :city,
-    :state,
-    :zip,
-    :closing_date,
-    :message
-  )
 end
