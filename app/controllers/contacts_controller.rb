@@ -3,8 +3,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if params[:home_btn]
-      @contact.save
+    if params[:home_btn] && @contact.save
       ContactMailer.contact_home_email(@contact).deliver
       ContactMailer.thank_you_email(@contact).deliver
       redirect_to root_path

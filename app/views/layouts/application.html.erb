@@ -29,13 +29,27 @@
   </head>
 
   <body>
-    <% if alert.present? || notice.present? %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif alert %>
+      <div id="alert_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
     <% end %>
+
     <%= yield %>
 
-
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('#notice_wrapper').fadeOut('slow', function() {
+            $this.remove();
+          });
+        }, 3500);
+      });
+    </script>
 
 
   </body>
