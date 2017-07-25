@@ -1,0 +1,38 @@
+<%= render 'partials/navbar' %>
+
+<header id="available_header">
+  <div class="secondary_header">
+    <div class="secondary_header__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="secondary_header__text">Our Communties</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="touch">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <h2 class="touch__header">Community Snapshots</h2>
+          <% for community in @communities %>
+            <h3><%= link_to community.name, community %></h3>
+            <p><%= community.overview %></p>
+          <% end %>
+
+        </div>
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3">
+          <%= render 'partials/sidebar-images' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= render 'partials/footer' %>

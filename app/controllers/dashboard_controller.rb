@@ -15,7 +15,7 @@ class DashboardController < ApplicationController
   end
 
   def communities
-    @communities = Community.all
+    @communities = Community.order(:sort).all
   end
 
   def settings

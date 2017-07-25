@@ -7,7 +7,7 @@
       <h1 class="page-header">Homes
         <%= link_to 'Add New', new_home_path, class: 'btn btn-default pull-right' %>
       </h1>
-      <h2 class="sub-header">Section title</h2>
+      
       <div>
         <% for home in @homes %>
           <p><%= link_to home.plan, edit_home_path(home) %></p>

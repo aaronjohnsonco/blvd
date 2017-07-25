@@ -123,6 +123,20 @@
     background-color: $black;
     border-right: 1px solid #eee;
   }
+  .community_listing_container {
+    background: #eee;
+    border-bottom: 3px solid #ccc;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    h3 {
+      font-family: $font_bold;
+      margin: 0 0 5px 0;
+    }
+    p {
+      font-family: $font_light;
+      margin: 0;
+    }
+  }
 }
 
 /* Sidebar navigation */
@@ -141,14 +155,18 @@
 }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:focus {
-  background: #444;
+  background-color: #444;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
+.nav-sidebar > li > a.active {
   color: #fff !important;
   background-color: $primary_color;
 }
+// .nav-sidebar > .active > a,
+// .nav-sidebar > .active > a:hover,
+// .nav-sidebar > .active > a:focus {
+//   color: #fff !important;
+//   background-color: $primary_color;
+// }
 
 
 /*
@@ -188,5 +206,82 @@
   display: inline-block;
   border-radius: 50%;
 }
+
+
+// CUSTOM BTN FOR DASHBOARD
+
+.btn-red {
+  color: #fff;
+  background-color: #222;
+  border-color: #222;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn-red:focus,
+.btn-red.focus {
+  color: #fff;
+  background-color: #222;
+  border-color: #222;
+}
+.btn-red:hover {
+  color: #fff;
+  background-color: #D0011B;
+  border-color: #D0011B;
+}
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red {
+  background-image: none;
+}
+.btn-red.disabled:hover,
+.btn-red[disabled]:hover,
+fieldset[disabled] .btn-red:hover,
+.btn-red.disabled:focus,
+.btn-red[disabled]:focus,
+fieldset[disabled] .btn-red:focus,
+.btn-red.disabled.focus,
+.btn-red[disabled].focus,
+fieldset[disabled] .btn-red.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-red .badge {
+  color: #fff;
+  background-color: #333;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.edit_delete_link {
+  color: $black !important;
+  text-decoration: none;
+}
+.edit_delete_link:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: $primary_color !important;
+  text-decoration: none;
+}
+
 
 // DASHBOARD NEW HOME

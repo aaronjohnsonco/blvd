@@ -12,10 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/sortable
+//= require rails_sortable
 //= require bootstrap
 //= require turbolinks
 //= require cocoon
 //= require react
 //= require react_ujs
+//= require ckeditor/init
 //= require components
 //= require_tree .
