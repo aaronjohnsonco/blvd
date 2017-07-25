@@ -1,4 +1,9 @@
 class PagesController < ApplicationController
+
+  before_action do
+    @communities = Community.order(:sort).all
+  end
+
   def home
     @contact = Contact.new
   end

@@ -5,29 +5,43 @@
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1 class="page-header">Homes
-        <%= link_to 'Add New', new_home_path, class: 'btn btn-default pull-right' %>
+        <%= link_to 'Add New', new_home_path, class: 'btn btn-red pull-right' %>
       </h1>
-      
+
       <div>
-        <% for home in @homes %>
-          <p><%= link_to home.plan, edit_home_path(home) %></p>
-          <p><%= home.description %></p>
-          <p><%= home.community.name %></p>
-          <p><%= home.community.overview %></p>
-          <p><%= home.community.school_title %></p>
-          <p><%= home.community.highschool %></p>
-          <p><%= home.community.middleschool %></p>
-          <p><%= home.community.elementaryschool %></p>
-          <p>Features:</p>
-          <% for feature in home.features %>
-            <p><%= feature.name %></p>
+        <div class="sortable">
+          <% sortable_fetch(@homes) do |home, id_tag|  %>
+
+            <div class="home_list_container" id="<%= id_tag %>">
+              <h3><%= home.plan %> - <span class="light">Lot <%= home.lot %></span></h3>
+              <p class="address">
+                <%= home.address %>, <%= home.city %>, <%= home.state %> <%= home.zip %> | <span class="bold"><%= home.community.name %></span>
+                <span class="pull-right">
+                  <%= link_to edit_home_path(home), class: 'edit_delete_link' do %>
+                    <span class="glyphicon glyphicon-pencil mr10" aria-hidden="true"></span>
+                  <% end %>
+                  <%= link_to home, class: 'edit_delete_link', data: {confirm: 'Are you sure'}, method: :delete do %>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                  <% end %>
+                </span>
+              </p>
+            </div>
+  <!--
+            <p>Features:</p>
+            <% for feature in home.features %>
+              <p><%= feature.name %></p>
+            <% end %>
+  -->
           <% end %>
-          <p>
-            <%= link_to "Edit", edit_home_path(home) %>
-            <%= link_to "Delete", home, data: {confirm: 'Are you sure?'}, method: :delete %>
-          </p>
-        <% end %>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $('.sortable').railsSortable();
+  });
+</script>

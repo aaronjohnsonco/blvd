@@ -5,6 +5,7 @@ class CommunitiesController < ApplicationController
   end
 
   def show
+    @communities = Community.order(:sort).all
     @community = Community.find(params[:id])
   end
 

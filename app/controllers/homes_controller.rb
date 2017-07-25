@@ -1,10 +1,12 @@
 class HomesController < ApplicationController
-
+  
   def index
+    @communities = Community.order(:sort).all
     @homes = Home.all
   end
 
   def show
+    @communities = Community.order(:sort).all
     @home = Home.find(params[:id])
     @features = @home.features.all
   end
