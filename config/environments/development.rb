@@ -39,7 +39,7 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-
+  Paperclip.options[:command_path] = "/opt/ImageMagick/bin/convert"
 
   config.action_mailer.perform_caching = false
 

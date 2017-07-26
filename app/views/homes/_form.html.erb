@@ -57,7 +57,16 @@
     </div>
     <div class="row">
       <div class="col-md-12">
+        <div class="form-group">
+          <label>Latitude</label>
+          <%= f.text_field :latitude, class: 'form-control', placeholder: 'Leave empty' %>
+        </div>
+        <div class="form-group">
+          <label>Longitude</label>
+          <%= f.text_field :longitude, class: 'form-control', placeholder: 'Leave empty' %>
+        </div>
         <div>
+
           <%= f.fields_for :features do |builder| %>
             <label>Feature List</label>
             <%= render 'feature_fields', f: builder %>
@@ -107,6 +116,18 @@
           <label>Community</label>
           <%= f.collection_select(:community_id, Community.all, :id, :name, prompt: true) %>
         </div>
+      </div>
+      <div class="col-md-12">
+
+        <%= f.fields_for :home_images do |builder| %>
+          <label>Add Photos:</label>
+          <%= render 'home_image_fields', f: builder %>
+        <% end %>
+        <%= link_to_add_association 'add image', f, :home_images %>
+
+
+
+
       </div>
     </div>
   </div>

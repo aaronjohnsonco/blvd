@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  
+
   def index
     @communities = Community.order(:sort).all
     @homes = Home.all
@@ -9,11 +9,11 @@ class HomesController < ApplicationController
     @communities = Community.order(:sort).all
     @home = Home.find(params[:id])
     @features = @home.features.all
+    @images = @home.home_images.all
   end
 
   def new
     @home = Home.new
-    @home.features.build
   end
 
   def create
@@ -44,6 +44,7 @@ class HomesController < ApplicationController
 
   private
 
+
     def home_params
       params.require(:home).permit(
         :community,
@@ -62,7 +63,10 @@ class HomesController < ApplicationController
         :status,
         :plan,
         :community_id,
-        features_attributes: [:id, :name, :_destroy]
+        :latitude,
+        :longitude,
+        features_attributes: [:id, :name, :_destroy],
+        home_images_attributes: [:id, :photo, :_destroy]
       )
     end
 end

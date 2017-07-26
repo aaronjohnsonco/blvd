@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'paperclip', '~> 5.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
@@ -58,17 +59,21 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'devise'
-# gem 'carrierwave', '~> 0.10.0'
-# gem 'mini_magick', '~> 4.3'
+gem 'ckeditor'
+# gem 'carrierwave'
+# gem 'mini_magick'
 # gem 'rmagick'
 # gem 'shrine'
-gem 'paperclip', '~> 5.0.0'
+
+gem 'underscore-rails'
 
 gem 'cocoon'
-gem 'ckeditor'
 gem 'figaro'
 gem 'active_link_to'
 gem 'rails_sortable'
+# gem 'google_maps_rails'
+gem 'gmaps4rails'
+gem 'geocoder'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

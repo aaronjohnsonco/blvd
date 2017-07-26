@@ -1,0 +1,5 @@
+<div class="nested-fields">
+  <%= f.file_field :photo, class: 'form-control', placeholder: 'Add photo' %>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to_remove_association "remove photo", f %>
+</div>

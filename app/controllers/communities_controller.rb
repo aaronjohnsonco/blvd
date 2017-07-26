@@ -55,7 +55,8 @@ class CommunitiesController < ApplicationController
       :middleschool,
       :elementaryschool,
       :school_title,
-      :content
+      :content,
+      :map
     )
   end
 

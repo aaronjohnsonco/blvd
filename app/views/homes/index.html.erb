@@ -25,7 +25,9 @@
       <% for home in @homes %>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="home">
-          <%= image_tag 'gw_home.png', class: 'home__img' %>
+          <%= image_tag home.home_images[0].photo.url, class: 'home__img' %>
+          <!-- @main_image = Home.home_images.where(photo_file_name: 'img1.png') -->
+          <!-- <%= image_tag 'gw_home.png', class: 'home__img' %> -->
           <div class="home_address">
             <p class="home_address__text">
               <span class="street">
