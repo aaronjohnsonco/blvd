@@ -8,8 +8,25 @@
 //   font-size: 4.0rem;
 //   margin: 0 0 5px 0;
 // }
+
+.warranty_blockquote {
+  border-bottom: 3px solid $black_light;
+  padding: 2rem 0;
+  margin: 0 0 2rem 0;
+}
+
+.warranty_blockquote_text {
+  font-family: $font_bold;
+  font-size: 2.2rem;
+  color: #777;
+  margin: 0;
+}
+.warranty_video {
+  margin: 0 0 2rem 0;
+}
+
 .touch__text {
-  font-family: $font_light;
+  font-family: $font_regular;
   font-size: 1.6rem;
 }
 .touch__text-contact {
