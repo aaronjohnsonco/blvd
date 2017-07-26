@@ -7,6 +7,7 @@ class CommunitiesController < ApplicationController
   def show
     @communities = Community.order(:sort).all
     @community = Community.find(params[:id])
+    @homes = @community.homes.all
   end
 
   def new

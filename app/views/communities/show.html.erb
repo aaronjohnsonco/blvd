@@ -1,5 +1,44 @@
 <%= render 'partials/navbar' %>
 
+<header id="available_header">
+  <div class="secondary_header">
+    <div class="secondary_header__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="secondary_header__text">Community Detail</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="touch">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-8">
+
+
+          <h2 class="touch__header"><%= @community.name %></h2>
+          <p class="touch__text"><%= @community.overview %></p>
+
+          <p>Homes available:</p>
+          <% for home in @homes %>
+            <%= home.home_images[0].photo.url %>
+          <% end %>
+
+        </div>
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3">
+          <%= render 'partials/sidebar-images' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
 
 
 

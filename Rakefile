@@ -3,4 +3,6 @@
 
 require_relative 'config/application'
 
+Aws.use_bundled_cert!
+
 Rails.application.load_tasks
