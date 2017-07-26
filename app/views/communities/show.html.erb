@@ -25,9 +25,18 @@
           <h2 class="touch__header"><%= @community.name %></h2>
           <p class="touch__text"><%= @community.overview %></p>
 
-          <p>Homes available:</p>
+          <p class="homes_available_header">Homes available:</p>
           <% for home in @homes %>
-            <%= image_tag home.home_images[0].photo.url %>
+            <div class="homes_available_container">
+              <div class="home_available_img">
+                <%= image_tag home.home_images[0].photo.url %>
+              </div>
+              <div class="home_available_text">
+                <h3><%= home.plan %></h3>
+                <p><%= home.description %></p>
+                <%= link_to 'View Home', home, class: 'home_available_link' %>
+              </div>
+            </div>
           <% end %>
 
         </div>
