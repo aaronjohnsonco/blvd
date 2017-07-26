@@ -29,7 +29,7 @@
           <% for home in @homes %>
             <div class="homes_available_container">
               <div class="home_available_img">
-                <%= image_tag home.home_images[0].photo.url %>
+                <%= image_tag home.home_images[0].photo.url, class: 'home_image' %>
               </div>
               <div class="home_available_text">
                 <h3><%= home.plan %></h3>
