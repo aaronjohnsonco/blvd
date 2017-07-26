@@ -7,7 +7,7 @@ class HomesController < ApplicationController
 
   def show
     @communities = Community.order(:sort).all
-    @home = Home.find(params[:id])
+    @home = Home.friendly.find(params[:id])
     @features = @home.features.all
     @images = @home.home_images.all
   end

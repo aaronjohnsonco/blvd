@@ -11,6 +11,13 @@ class Home < ApplicationRecord
 
   after_validation :geocode
 
+  extend FriendlyId
+  friendly_id :address, use: :slugged
+
+  def should_generate_new_friendly_id?
+    new_record?
+  end
+
   def set_address
     address + ', ' + city + ', ' + state
   end
