@@ -75,7 +75,7 @@ gem 'rails_sortable'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'aws-sdk', '~> 2.3'
-gem 'friendly_id'
+# gem 'friendly_id'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
