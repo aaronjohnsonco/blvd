@@ -27,7 +27,7 @@
 
           <p>Homes available:</p>
           <% for home in @homes %>
-            <%= home.home_images[0].photo.url %>
+            <%= image_tag home.home_images[0].photo.url %>
           <% end %>
 
         </div>
