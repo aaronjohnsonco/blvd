@@ -22,23 +22,27 @@
         <div class="col-xs-12 col-sm-12 col-md-8">
 
 
+
           <h2 class="touch__header"><%= @community.name %></h2>
           <p class="touch__text"><%= @community.overview %></p>
 
-          <p class="homes_available_header">Homes available:</p>
-          <% for home in @homes %>
-            <div class="homes_available_container">
-              <div class="home_available_img">
-                <%= image_tag home.home_images[0].photo.url, class: 'home_image' %>
+          <% if @community.homes.count == 0 %>
+            <p class="homes_available_header">Currently no homes are available.</p>
+          <% else %>
+            <p class="homes_available_header">Homes available:</p>
+            <% for home in @homes %>
+              <div class="homes_available_container">
+                <div class="home_available_img">
+                  <%= image_tag home.home_images[0].photo.url, class: 'home_image' %>
+                </div>
+                <div class="home_available_text">
+                  <h3><%= home.plan %></h3>
+                  <p><%= home.description %></p>
+                  <%= link_to 'View Home', home, class: 'home_available_link' %>
+                </div>
               </div>
-              <div class="home_available_text">
-                <h3><%= home.plan %></h3>
-                <p><%= home.description %></p>
-                <%= link_to 'View Home', home, class: 'home_available_link' %>
-              </div>
-            </div>
+            <% end %>
           <% end %>
-
         </div>
         <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3">
           <%= render 'partials/sidebar-images' %>
