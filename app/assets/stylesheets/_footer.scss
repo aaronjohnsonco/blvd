@@ -12,6 +12,27 @@
 //   padding: 0 20px 0 0;
 //   border-right: 3px solid #333;
 // }
+
+.bmi_container {
+  padding: 10px 0;
+}
+.bmi_text {
+  text-align: center;
+  font-family: $font_regular;
+  font-size: 1.2rem;
+  color: #444;
+}
+.bmi_link {
+  color: #444 !important;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.bmi_link:hover, .bmi_link:focus {
+  color: $white;
+  text-decoration: underline;
+}
+
 .contact {
   margin: 20px 0;
 }
