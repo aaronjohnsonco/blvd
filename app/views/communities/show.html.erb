@@ -27,7 +27,7 @@
           <p class="touch__text"><%= @community.overview %></p>
 
           <div class="community__content">
-            <%= @community.content %>
+            <%= @community.content.html_safe %>
           </div>
 
           <% if @community.homes.count == 0 %>
