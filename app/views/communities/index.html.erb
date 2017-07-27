@@ -22,7 +22,7 @@
         <div class="col-xs-12 col-sm-12 col-md-8">
           <h2 class="touch__header">Community Snapshots</h2>
           <% for community in @communities %>
-            <h3><%= link_to community.name, community %></h3>
+            <h3 class="community__title"><%= link_to community.name, community, class: 'community_link' %></h3>
             <p><%= community.overview %></p>
           <% end %>
 
