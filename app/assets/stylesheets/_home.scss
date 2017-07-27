@@ -39,13 +39,13 @@
 }
 
 .community_link {
-  color: $primary_color !important;
+  color: $black !important;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .community_link:hover, .community_link:focus {
-  color: $primary_color_alt !important;
-  text-decoration: underline;
+  color: $primary_color !important;
+  text-decoration: none !important;
 }
 
 
