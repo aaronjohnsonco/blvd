@@ -30,23 +30,27 @@
             <%= @community.content.html_safe %>
           </div>
 
-          <% if @community.homes.count == 0 %>
-            <p class="homes_available_header">There are no homes available at this time.</p>
-          <% else %>
-            <p class="homes_available_header">Homes available:</p>
-            <% for home in @homes %>
-              <div class="homes_available_container">
-                <div class="home_available_img">
-                  <%= image_tag home.home_images[0].photo.url, class: 'home_image' %>
+          <div class="available_homes_container">
+            <% if @community.homes.count == 0 %>
+              <p class="homes_available_header">There are no homes available at this time.</p>
+            <% else %>
+              <p class="homes_available_header">Homes available:</p>
+              <% for home in @homes %>
+                <div class="homes_available_container">
+                  <div class="home_available_img">
+                    <%= image_tag home.home_images[0].photo.url, class: 'home_image' %>
+                  </div>
+                  <div class="home_available_text">
+                    <h3><%= home.plan %></h3>
+                    <p><%= home.description %></p>
+                    <p><%= link_to 'View Detail', home, class: 'home__link_alt' %></p>
+                  </div>
                 </div>
-                <div class="home_available_text">
-                  <h3><%= home.plan %></h3>
-                  <p><%= home.description %></p>
-                  <p><%= link_to 'View Detail', home, class: 'home__link_alt' %></p>
-                </div>
-              </div>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
+
+
         </div>
         <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3">
           <%= render 'partials/sidebar-images' %>
