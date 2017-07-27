@@ -20,10 +20,12 @@
       <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-8">
-          <h2 class="touch__header">Community Snapshots</h2>
+          <h2 class="community__header">Community Snapshots</h2>
           <% for community in @communities %>
-            <h3 class="community__title"><%= link_to community.name, community, class: 'community_link' %></h3>
-            <p><%= community.overview %></p>
+            <div class="community__container">
+              <h3 class="community__title"><%= link_to community.name, community, class: 'community_link' %></h3>
+              <p class="community__text"><%= community.overview %></p>
+            </div>
           <% end %>
 
         </div>
