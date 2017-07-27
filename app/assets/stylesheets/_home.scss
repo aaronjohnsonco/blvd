@@ -700,7 +700,16 @@ span.builders {
        font-size: 1.6rem;
        margin: 0 0 7px 0;
      }
-
+     a {
+       color: $black !important;
+       text-decoration: none;
+       -webkit-transition: all 0.5s;
+       transition: all 0.5s;
+     }
+     a:hover, a:focus {
+       color: $primary_color;
+       text-decoration: none !important;
+     }
 
    }
 
