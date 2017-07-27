@@ -27,7 +27,7 @@
           <p class="touch__text"><%= @community.overview %></p>
 
           <% if @community.homes.count == 0 %>
-            <p class="homes_available_header">Currently no homes are available.</p>
+            <p class="homes_available_header">There are no homes available at this time.</p>
           <% else %>
             <p class="homes_available_header">Homes available:</p>
             <% for home in @homes %>
@@ -38,7 +38,7 @@
                 <div class="home_available_text">
                   <h3><%= home.plan %></h3>
                   <p><%= home.description %></p>
-                  <%= link_to 'View Home', home, class: 'home_available_link' %>
+                  <p><%= link_to 'View Home', home, class: 'home_available_link' %></p>
                 </div>
               </div>
             <% end %>
