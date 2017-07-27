@@ -26,6 +26,10 @@
           <h2 class="touch__header"><%= @community.name %></h2>
           <p class="touch__text"><%= @community.overview %></p>
 
+          <div class="community__content">
+            <%= @community.content %>
+          </div>
+
           <% if @community.homes.count == 0 %>
             <p class="homes_available_header">There are no homes available at this time.</p>
           <% else %>
