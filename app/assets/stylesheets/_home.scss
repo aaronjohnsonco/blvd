@@ -30,6 +30,8 @@
 
 .pdf_link {
   color: $primary_color !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .pdf_link:hover, .pdf_link:focus {
   color: $primary_color_alt !important;
@@ -38,6 +40,8 @@
 
 .community_link {
   color: $primary_color !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .community_link:hover, .community_link:focus {
   color: $primary_color_alt !important;
