@@ -23,8 +23,9 @@
           <h2 class="community__header_alt">Community Snapshots</h2>
           <% for community in @communities %>
             <div class="community__container">
-              <h3 class="community__title"><%= link_to community.name, community, class: 'community_link' %></h3>
+              <h3 class="community__title"><%= community.name, community %></h3>
               <p class="community__text"><%= community.overview %></p>
+              <p><%= link_to 'View Community', community, class: 'home__link_alt' %></p>
             </div>
           <% end %>
 
