@@ -5,7 +5,12 @@
   </head>
   <body>
     <p><%= @contact.first_name %> <%= @contact.last_name %></p>
-    <p><%= @contact.email %>
+    <p><%= @contact.email %></p>
+    <p><%= @contact.phone %></p>
+    <p><%= @contact.address %><br/>
+      <%= @contact.city %>, <%= @contact.state %> <%= @contact.zip %></p>
+      <hr/>
+    <p>Community interested in: <%= @contact.community %></p>
     <p><%= @contact.message %></p>
   </body>
 </html>
