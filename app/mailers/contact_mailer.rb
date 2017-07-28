@@ -17,7 +17,7 @@ class ContactMailer < ApplicationMailer
 
   def contact_home_email(contact)
     @contact = contact
-    mail(from: contact.email, to: 'aaronjohnsonis@gmail.com', subject: 'New Home Page Contact')
+    mail(from: contact.email, to: ['aaronjohnsonis@gmail.com', 'aaronj@bigmoondev.com'], subject: 'New Home Page Contact')
   end
 
 end
