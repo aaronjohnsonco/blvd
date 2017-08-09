@@ -42,7 +42,7 @@
             <div class="welcome_contact">
               <h3 class="welcome_contact_header">Get in touch...</h3>
               <p class="welcome_contact_text">Contact sales at <span class="bold">615-799-5391</span>, or use the form below.</p>
-              <%= form_for @contact do |f| %>
+              <%= form_for @contact, html: {id: 'invisible-recaptcha-form'} do |f| %>
                   <div class="row no-gutter">
                     <div class="col-xs-12 col-sm-12 col-md-6">
                       <div class="form-group">
@@ -60,6 +60,9 @@
                   </div>
                 <div class="form-group">
                   <%= f.text_area :message, class: 'touch__textarea', rows: 3, placeholder: 'Add a message...' %>
+                </div>
+                <div id="recaptcha-box-home">
+                  <%= recaptcha_tags %>
                 </div>
                 <%= f.submit "Send message", name: 'home_btn', class: 'option__btn' %>
               <% end %>
@@ -181,3 +184,12 @@
 </main>
 
 <%= render 'partials/footer' %>
+
+<script>
+  $(document).ready(function() {
+    $('#recaptcha-box-home').hide();
+    $('input').on('focus', function() {
+      $('#recaptcha-box-home').show();
+    });
+  });
+</script>

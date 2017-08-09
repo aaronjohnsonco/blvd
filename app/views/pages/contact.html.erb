@@ -92,6 +92,9 @@
               </div>
 
             </div>
+            <div id="recaptcha-box-contact">
+              <%= recaptcha_tags %>
+            </div>
             <%= f.submit "Send message", name: 'contact_btn', class: 'touch__btn' %>
           <% end %>
         </div>
@@ -104,3 +107,12 @@
 </main>
 
 <%= render 'partials/footer' %>
+
+<script>
+  $(document).ready(function() {
+    $('#recaptcha-box-contact').hide();
+    $('input').on('focus', function() {
+      $('#recaptcha-box-contact').show();
+    });
+  });
+</script>

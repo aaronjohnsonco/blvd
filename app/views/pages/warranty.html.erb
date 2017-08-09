@@ -124,6 +124,9 @@
               </div>
 
             </div>
+            <div id="recaptcha-box-warranty">
+              <%= recaptcha_tags %>
+            </div>
             <%= f.submit "Send message", name: 'warranty_btn', class: 'touch__btn' %>
           <% end %>
         </div>
@@ -138,3 +141,12 @@
 <script src="https://cdn.rawgit.com/skipser/youtube-autoresize/master/youtube-autoresizer.js"></script>
 
 <%= render 'partials/footer' %>
+
+<script>
+  $(document).ready(function() {
+    $('#recaptcha-box-warranty').hide();
+    $('input').on('focus', function() {
+      $('#recaptcha-box-warranty').show();
+    });
+  });
+</script>
