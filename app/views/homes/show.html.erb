@@ -121,11 +121,11 @@ $(function(){
 
           <p class="detail_description_feature"><span class="bold">Features:</span></p>
           <ul class="home_feature_list">
-            <!-- <% if @features.present? %> -->
+            <% if @features.present? %>
             <% for feature in @features %>
               <li><span class="feature_list_item"><%= feature.name %></span></li>
             <% end %>
-            <!-- <% end %> -->
+            <% end %>
             <!-- <li><span class="feature_list_item">Vaulted Owners' Suite with beams</span></li>
             <li><span class="feature_list_item">Whirlpool&reg; Stainless Steel Appliances</span></li>
             <li><span class="feature_list_item">Custom Maple Cabinets</span></li>
