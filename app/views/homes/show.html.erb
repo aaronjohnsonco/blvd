@@ -118,8 +118,10 @@ $(function(){
 
           <p class="detail_description_feature"><span class="bold">Features:</span></p>
           <ul class="home_feature_list">
+            <% if @features.present? %>
             <% for feature in @features %>
               <li><span class="feature_list_item"><%= feature.name %></span></li>
+            <% end %>
             <% end %>
             <!-- <li><span class="feature_list_item">Vaulted Owners' Suite with beams</span></li>
             <li><span class="feature_list_item">Whirlpool&reg; Stainless Steel Appliances</span></li>
@@ -137,9 +139,11 @@ $(function(){
 
 
           <p class="detail_description_alt">
-            <span class="bold">Contact Us:</span><br/>
-            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp;&nbsp; 615-252-6781<br/>
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp; contact@blvdhomes.com
+            <span class="bold">Contact our sales team:</span><br/>
+            <%= image_tag 'BoldCharter.png', class: 'charter_logo' %>
+            <br/>
+            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp;&nbsp; 615-799-5391<br/>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp; info@blvdhomes.com
           </p>
           <!-- <a href="/detail" class="home__link">View Specs</a> -->
 
