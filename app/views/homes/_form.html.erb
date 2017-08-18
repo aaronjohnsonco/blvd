@@ -84,31 +84,31 @@
       <div class="col-md-6">
         <div class="form-group">
           <label>Status</label>
-          <%= f.select :status, options_for_select(["Under Construction", "Available", "Pending", "Sold"]), {prompt: 'Status'} %>
+          <%= f.select :status, options_for_select(["Under Construction", "Available", "Pending", "Sold"], selected: @home.status), {prompt: 'Status'} %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label>Garage</label>
-          <%= f.select :garage, options_for_select(["1-Car", "2-Car", "3-Car"]), {prompt: 'Select garage'} %>
+          <%= f.select :garage, options_for_select(["1-Car", "2-Car", "3-Car"], selected: @home.garage), {prompt: 'Select garage'} %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label>Bedrooms</label>
-          <%= f.select :bedrooms, options_for_select(["2", "3", "4", "5"]), {prompt: 'Select bedrooms'} %>
+          <%= f.select :bedrooms, options_for_select(["2", "3", "4", "5"], selected: @home.bedrooms), {prompt: 'Select bedrooms'} %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label>Bathrooms</label>
-          <%= f.select :baths, options_for_select(["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5"]), {prompt: 'Select bathrooms'} %>
+          <%= f.select :baths, options_for_select(["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5"], selected: @home.baths), {prompt: 'Select bathrooms'} %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label>Stories</label>
-          <%= f.select :stories, options_for_select(["1", "2", "3"]), {prompt: 'Select Stories'} %>
+          <%= f.select :stories, options_for_select(["1", "2", "3"], selected: @home.stories), {prompt: 'Select Stories'} %>
         </div>
       </div>
       <div class="col-md-6">
