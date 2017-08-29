@@ -79,7 +79,8 @@
               <div class="col-xs-12 col-sm-12 col-md-6">
                 <div class="form-group">
                   <label class="touch__label">Community you are interested in</label>
-                  <%= f.collection_select(:community, Community.all, :id, :name, prompt: 'Select a community') %>
+                  <!-- <%= f.collection_select(:community, Community.all, :id, :name, prompt: 'Select a community') %> -->
+                  <%= f.text_field :community, class: 'touch__input', placeholder: 'Enter community' %>
                 </div>
               </div>
             </div>
