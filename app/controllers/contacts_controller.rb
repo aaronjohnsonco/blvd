@@ -8,12 +8,20 @@ class ContactsController < ApplicationController
       ContactMailer.thank_you_email(@contact).deliver
       redirect_to root_path
       flash[:notice] = "Your message has been sent."
-    elsif verify_recaptcha(model: @contact) && params[:contact_btn] && @contact.save
+    else
+      redirect_to root_path
+      flash[:notice] = "Your email did not go through, please try again."
+    end
+    if verify_recaptcha(model: @contact) && params[:contact_btn] && @contact.save
       ContactMailer.contact_general_email(@contact).deliver
       ContactMailer.thank_you_email(@contact).deliver
       redirect_to root_path
       flash[:notice] = "Your message has been sent."
-    elsif verify_recaptcha(model: @contact) && params[:warranty_btn] && @contact.save
+    else
+      redirect_to root_path
+      flash[:notice] = "Your email did not go through, please try again."
+    end
+    if verify_recaptcha(model: @contact) && params[:warranty_btn] && @contact.save
       ContactMailer.contact_warranty_email(@contact).deliver
       ContactMailer.thank_you_email(@contact).deliver
       redirect_to root_path
