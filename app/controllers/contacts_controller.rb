@@ -3,33 +3,49 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if verify_recaptcha(model: @contact) && params[:home_btn] && @contact.save
-      ContactMailer.contact_home_email(@contact).deliver
-      ContactMailer.thank_you_email(@contact).deliver
-      redirect_to root_path
-      flash[:notice] = "Your message has been sent."
+    if verify_recaptcha(model: @contact) && @contact.save
+      if params[:home_btn]
+        ContactMailer.contact_home_email(@contact).deliver
+        ContactMailer.thank_you_email(@contact).deliver
+        redirect_to root_path
+        flash[:notice] = "Your message has been sent."
+      elsif params[:contact_btn]
+        ContactMailer.contact_general_email(@contact).deliver
+        ContactMailer.thank_you_email(@contact).deliver
+        redirect_to root_path
+        flash[:notice] = "Your message has been sent."
+      elsif params[:warranty_btn]
+        ContactMailer.contact_warranty_email(@contact).deliver
+        ContactMailer.thank_you_email(@contact).deliver
+        redirect_to root_path
+        flash[:notice] = "Your message has been sent."
+      end
     else
       redirect_to root_path
       flash[:notice] = "Your email did not go through, please try again."
     end
-    if verify_recaptcha(model: @contact) && params[:contact_btn] && @contact.save
-      ContactMailer.contact_general_email(@contact).deliver
-      ContactMailer.thank_you_email(@contact).deliver
-      redirect_to root_path
-      flash[:notice] = "Your message has been sent."
-    else
-      redirect_to root_path
-      flash[:notice] = "Your email did not go through, please try again."
-    end
-    if verify_recaptcha(model: @contact) && params[:warranty_btn] && @contact.save
-      ContactMailer.contact_warranty_email(@contact).deliver
-      ContactMailer.thank_you_email(@contact).deliver
-      redirect_to root_path
-      flash[:notice] = "Your message has been sent."
-    else
-      redirect_to root_path
-      flash[:notice] = "Your email did not go through, please try again."
-    end
+
+
+
+    # if verify_recaptcha(model: @contact) && params[:home_btn] && @contact.save
+    #   ContactMailer.contact_home_email(@contact).deliver
+    #   ContactMailer.thank_you_email(@contact).deliver
+    #   redirect_to root_path
+    #   flash[:notice] = "Your message has been sent."
+    # elsif verify_recaptcha(model: @contact) && params[:contact_btn] && @contact.save
+    #   ContactMailer.contact_general_email(@contact).deliver
+    #   ContactMailer.thank_you_email(@contact).deliver
+    #   redirect_to root_path
+    #   flash[:notice] = "Your message has been sent."
+    # elsif verify_recaptcha(model: @contact) && params[:warranty_btn] && @contact.save
+    #   ContactMailer.contact_warranty_email(@contact).deliver
+    #   ContactMailer.thank_you_email(@contact).deliver
+    #   redirect_to root_path
+    #   flash[:notice] = "Your message has been sent."
+    # else
+    #   redirect_to root_path
+    #   flash[:notice] = "Your email did not go through, please try again."
+    # end
 
   end
 
